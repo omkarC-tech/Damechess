@@ -5,6 +5,7 @@ import BenefitsSection from "@/components/ui/benefits-section";
 import PricingSection from "@/components/ui/pricing-section";
 import TestimonialsSection from "@/components/ui/testimonials-section";
 import CTASection from "@/components/ui/cta-section";
+import FAQSection from "@/components/ui/faq-section";
 import Footer from "@/components/ui/footer";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <PricingSection />
       <TestimonialsSection />
       <CTASection />
+      <FAQSection />
       <Footer />
     </div>
   );

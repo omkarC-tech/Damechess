@@ -18,43 +18,43 @@ export default function BenefitsSection() {
 
         {/* Benefits Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
-            <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+          <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 cursor-pointer group">
+            <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
               <Brain className="text-white w-8 h-8" />
             </div>
-            <h3 className="text-xl font-bold text-dame-dark mb-3">Critical Thinking</h3>
+            <h3 className="text-xl font-bold text-purple-700 mb-3">Critical Thinking</h3>
             <p className="text-gray-600">Develops problem-solving skills and strategic planning abilities that help in academics and life.</p>
           </div>
 
-          <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
-            <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center mb-6">
+          <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 cursor-pointer group">
+            <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
               <Eye className="text-white w-8 h-8" />
             </div>
-            <h3 className="text-xl font-bold text-dame-dark mb-3">Focus & Patience</h3>
+            <h3 className="text-xl font-bold text-green-700 mb-3">Focus & Patience</h3>
             <p className="text-gray-600">Improves concentration and teaches the value of careful consideration before making decisions.</p>
           </div>
 
-          <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
-            <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center mb-6">
+          <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 cursor-pointer group">
+            <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
               <GraduationCap className="text-white w-8 h-8" />
             </div>
-            <h3 className="text-xl font-bold text-dame-dark mb-3">Academic Benefits</h3>
+            <h3 className="text-xl font-bold text-blue-700 mb-3">Academic Benefits</h3>
             <p className="text-gray-600">Studies show chess players often perform better in math and reading comprehension.</p>
           </div>
 
-          <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
-            <div className="w-16 h-16 bg-gradient-to-br from-red-400 to-red-600 rounded-xl flex items-center justify-center mb-6">
+          <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 cursor-pointer group">
+            <div className="w-16 h-16 bg-gradient-to-br from-red-400 to-red-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
               <Zap className="text-white w-8 h-8" />
             </div>
-            <h3 className="text-xl font-bold text-dame-dark mb-3">Memory Enhancement</h3>
+            <h3 className="text-xl font-bold text-red-700 mb-3">Memory Enhancement</h3>
             <p className="text-gray-600">Regular chess practice significantly improves both short-term and long-term memory capacity.</p>
           </div>
 
-          <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
-            <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-xl flex items-center justify-center mb-6">
+          <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 cursor-pointer group">
+            <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
               <Lightbulb className="text-white w-8 h-8" />
             </div>
-            <h3 className="text-xl font-bold text-dame-dark mb-3">Creativity</h3>
+            <h3 className="text-xl font-bold text-yellow-700 mb-3">Creativity</h3>
             <p className="text-gray-600">Chess encourages creative thinking and helps kids find innovative solutions to complex problems.</p>
           </div>
 

@@ -18,7 +18,7 @@ export default function Navigation() {
   return (
     <nav className="bg-gradient-to-r from-purple-900/95 to-pink-900/95 backdrop-blur-xl fixed w-full top-0 z-50 border-b border-purple-500/30 shadow-xl">
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-6">
+        <div className="flex justify-between items-center py-3">
           {/* Professional Logo */}
           <div className="flex items-center space-x-3">
             <img 
@@ -26,7 +26,7 @@ export default function Navigation() {
               alt="Dame Chess Academy Logo" 
               className="w-12 h-12 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
             />
-            <div className="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
+            <div className="text-xl font-bold text-white">
               Dame Chess Academy
             </div>
           </div>

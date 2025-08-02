@@ -54,44 +54,10 @@ export default function FeaturesSection() {
             </div>
           </div>
 
-          {/* Interactive Learning Demo */}
-          <div className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-3xl p-8 shadow-2xl">
-            <div className="text-center">
-              <div className="text-6xl mb-6">🎯</div>
-              <h4 className="text-2xl font-bold text-purple-700 mb-4">Interactive Learning</h4>
-              <p className="text-purple-600 text-lg">
-                Experience chess like never before with our fun, interactive approach designed specifically for young minds.
-              </p>
-            </div>
-          </div>
+
         </div>
 
-        {/* Feature Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow hover:scale-105 transform duration-300">
-            <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <Puzzle className="text-white w-8 h-8" />
-            </div>
-            <h3 className="text-xl font-bold text-purple-700 mb-3">100,000+ Puzzles</h3>
-            <p className="text-purple-600">From beginner to advanced levels, our vast puzzle library keeps learning engaging and challenging.</p>
-          </div>
 
-          <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow hover:scale-105 transform duration-300">
-            <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <Play className="text-white w-8 h-8" />
-            </div>
-            <h3 className="text-xl font-bold text-orange-700 mb-3">800+ Video Lessons</h3>
-            <p className="text-orange-600">Interactive video content taught by expert chess masters, designed specifically for young learners.</p>
-          </div>
-
-          <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow hover:scale-105 transform duration-300">
-            <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-400 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <Bot className="text-white w-8 h-8" />
-            </div>
-            <h3 className="text-xl font-bold text-yellow-700 mb-3">Smart Practice</h3>
-            <p className="text-yellow-600">Practice against kid-friendly opponents that adapt to your skill level for optimal learning.</p>
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -62,7 +62,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="min-h-screen pt-20 pb-16 relative overflow-hidden perspective-3d">
+    <section className="min-h-screen pt-16 pb-16 relative overflow-hidden perspective-3d">
       {/* Dynamic Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900"></div>
       <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/30 via-transparent to-orange-400/20"></div>
@@ -154,15 +154,15 @@ export default function HeroSection() {
 
           {/* Stats Display */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-scale-in">
-            <div className="text-center bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-300/30">
+            <div className="text-center bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-300/30 hover:scale-105 hover:bg-purple-500/30 transition-all duration-500 cursor-pointer transform hover:-translate-y-2 hover:shadow-2xl">
               <div className="text-4xl font-bold text-yellow-400 mb-2">100,000+</div>
               <div className="text-white">Chess Puzzles</div>
             </div>
-            <div className="text-center bg-gradient-to-br from-blue-500/20 to-cyan-500/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-300/30">
+            <div className="text-center bg-gradient-to-br from-blue-500/20 to-cyan-500/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-300/30 hover:scale-105 hover:bg-blue-500/30 transition-all duration-500 cursor-pointer transform hover:-translate-y-2 hover:shadow-2xl">
               <div className="text-4xl font-bold text-yellow-400 mb-2">800+</div>
               <div className="text-white">Video Lessons</div>
             </div>
-            <div className="text-center bg-gradient-to-br from-green-500/20 to-teal-500/20 backdrop-blur-sm rounded-2xl p-8 border border-green-300/30">
+            <div className="text-center bg-gradient-to-br from-green-500/20 to-teal-500/20 backdrop-blur-sm rounded-2xl p-8 border border-green-300/30 hover:scale-105 hover:bg-green-500/30 transition-all duration-500 cursor-pointer transform hover:-translate-y-2 hover:shadow-2xl">
               <div className="text-4xl font-bold text-yellow-400 mb-2">10,000+</div>
               <div className="text-white">Happy Students</div>
             </div>
