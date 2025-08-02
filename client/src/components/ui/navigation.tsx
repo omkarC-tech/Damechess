@@ -26,9 +26,21 @@ export default function Navigation() {
               alt="Dame Chess Academy Logo" 
               className="w-12 h-12 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
             />
-            <div className="text-xl font-bold text-white">
-              Dame Chess Academy
-            </div>
+            <div className="font-bold leading-tight">
+  <div className="flex items-center space-x-1 text-2xl">
+    <span className="text-white">D</span>
+    <span className="bg-gradient-to-br from-red-600 to-blue-700 text-black w-6 h-6 flex items-center justify-center rounded-sm shadow-md backdrop-blur-sm">
+      A
+    </span>
+    <span className="text-white">M</span>
+    <span className="text-white">E</span>
+  </div>
+  <div className="text-sm font-semibold text-white pl-1 tracking-wide">Chess Academy</div>
+</div>
+
+
+
+
           </div>
 
           {/* Modern Desktop Navigation */}
