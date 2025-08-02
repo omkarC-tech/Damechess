@@ -24,11 +24,15 @@
   --ring: hsl(221, 83%, 53%);
   --radius: 0.5rem;
   
-  /* DameChess Brand Colors */
+  /* Professional Color Palette inspired by Eight Times Eight */
   --dame-blue: hsl(224, 76%, 48%);
   --dame-red: hsl(0, 74%, 42%);
   --dame-gold: hsl(43, 96%, 56%);
   --dame-dark: hsl(220, 26%, 14%);
+  --dame-purple: hsl(262, 83%, 58%);
+  --dame-orange: hsl(25, 95%, 53%);
+  --dame-green: hsl(142, 76%, 36%);
+  --dame-teal: hsl(173, 58%, 39%);
 }
 
 .dark {
@@ -64,86 +68,147 @@
 }
 
 @layer utilities {
-  .dame-blue {
-    color: hsl(224, 76%, 48%);
-  }
+  .dame-blue { color: hsl(224, 76%, 48%); }
+  .dame-red { color: hsl(0, 74%, 42%); }
+  .dame-gold { color: hsl(43, 96%, 56%); }
+  .dame-dark { color: hsl(220, 26%, 14%); }
+  .dame-purple { color: hsl(262, 83%, 58%); }
+  .dame-orange { color: hsl(25, 95%, 53%); }
+  .dame-green { color: hsl(142, 76%, 36%); }
+  .dame-teal { color: hsl(173, 58%, 39%); }
   
-  .dame-red {
-    color: hsl(0, 74%, 42%);
+  .bg-dame-blue { background-color: hsl(224, 76%, 48%); }
+  .bg-dame-red { background-color: hsl(0, 74%, 42%); }
+  .bg-dame-gold { background-color: hsl(43, 96%, 56%); }
+  .bg-dame-dark { background-color: hsl(220, 26%, 14%); }
+  .bg-dame-purple { background-color: hsl(262, 83%, 58%); }
+  .bg-dame-orange { background-color: hsl(25, 95%, 53%); }
+  .bg-dame-green { background-color: hsl(142, 76%, 36%); }
+  .bg-dame-teal { background-color: hsl(173, 58%, 39%); }
+}
+
+/* Advanced 3D Animation keyframes */
+@keyframes float3d {
+  0%, 100% {
+    transform: translateY(0px) rotateX(0deg) rotateY(0deg);
   }
-  
-  .dame-gold {
-    color: hsl(43, 96%, 56%);
+  33% {
+    transform: translateY(-20px) rotateX(5deg) rotateY(15deg);
   }
-  
-  .dame-dark {
-    color: hsl(220, 26%, 14%);
-  }
-  
-  .bg-dame-blue {
-    background-color: hsl(224, 76%, 48%);
-  }
-  
-  .bg-dame-red {
-    background-color: hsl(0, 74%, 42%);
-  }
-  
-  .bg-dame-gold {
-    background-color: hsl(43, 96%, 56%);
-  }
-  
-  .bg-dame-dark {
-    background-color: hsl(220, 26%, 14%);
+  66% {
+    transform: translateY(-10px) rotateX(-3deg) rotateY(-10deg);
   }
 }
 
-/* Animation keyframes */
-@keyframes float {
+@keyframes rotate3d {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+@keyframes chess-float {
   0%, 100% {
-    transform: translateY(0px);
+    transform: translateY(0px) scale(1);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-15px) scale(1.05);
   }
 }
 
-@keyframes bounce-slow {
-  0%, 100% {
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
     transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-25%);
-  }
-}
-
-@keyframes pulse-slow {
-  0%, 100% {
     opacity: 1;
   }
-  50% {
-    opacity: 0.5;
+}
+
+@keyframes scale-in {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
-.animate-float {
-  animation: float 3s ease-in-out infinite;
+.animate-float3d {
+  animation: float3d 4s ease-in-out infinite;
 }
 
-.animate-bounce-slow {
-  animation: bounce-slow 2s infinite;
+.animate-rotate3d {
+  animation: rotate3d 20s linear infinite;
 }
 
-.animate-pulse-slow {
-  animation: pulse-slow 3s infinite;
+.animate-chess-float {
+  animation: chess-float 3s ease-in-out infinite;
 }
 
-/* Chess piece animations */
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.8s ease-out;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.6s ease-out;
+}
+
+/* 3D Chess piece animations */
 .chess-piece {
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  perspective: 1000px;
 }
 
 .chess-piece:hover {
-  transform: scale(1.1) rotate(5deg);
+  transform: scale(1.15) rotateY(15deg) rotateX(10deg);
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+}
+
+/* 3D Effects */
+.perspective-3d {
+  perspective: 1200px;
+  perspective-origin: center center;
+}
+
+.transform-3d {
+  transform-style: preserve-3d;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.shimmer-bg {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  background-size: 200% 100%;
 }
 
 /* Custom scrollbar */

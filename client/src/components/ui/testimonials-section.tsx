@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Star } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Quote, Star, Users, Award } from "lucide-react";
 
 export default function TestimonialsSection() {
   const [statsCounters, setStatsCounters] = useState({
@@ -59,108 +60,121 @@ export default function TestimonialsSection() {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      role: "Parent of Emma, Age 8",
-      content: "My 8-year-old daughter went from knowing nothing about chess to winning her school tournament in just 6 months! The AI-powered lessons kept her engaged and motivated.",
-      avatar: "👩‍💼"
+      name: "Priya Sharma",
+      role: "Parent of Arjun, Age 10",
+      content: "My son went from knowing nothing about chess to winning his school tournament in 8 months! The structured curriculum and progress tracking helped us see his improvement every week.",
+      avatar: "👩‍💼",
+      rating: 5
     },
     {
-      name: "Michael Chen",
-      role: "Parent of David, Age 12",
-      content: "The progress tracking is incredible! I can see exactly where my son needs improvement. His math grades have improved significantly since starting chess.",
-      avatar: "👨‍💻"
+      name: "Raj Patel",
+      role: "Parent of Kavya, Age 12",
+      content: "The video lessons are amazing quality and my daughter's math grades improved by 25% since she started chess. The teachers are very patient and skilled.",
+      avatar: "👨‍💻",
+      rating: 5
     },
     {
-      name: "Lisa Rodriguez",
-      role: "Primary School Teacher",
-      content: "As a teacher, I'm amazed by how DameChess has improved my students' concentration and problem-solving skills. The classroom management tools are excellent!",
-      avatar: "👩‍🏫"
-    },
-    {
-      name: "Alex Kumar",
-      role: "Student, Age 14",
-      content: "I love the AI that adapts to my playing style! The puzzles get harder as I improve, and I never get bored. Chess is now my favorite subject!",
-      avatar: "🧑‍🎓"
-    },
-    {
-      name: "Dr. Priya Sharma",
+      name: "Anita Verma",
       role: "School Principal",
-      content: "Our school chess program has been transformed! Students are more engaged, and we've seen remarkable improvements in their analytical thinking across all subjects.",
-      avatar: "👩‍💼"
-    },
-    {
-      name: "Rajesh Patel",
-      role: "Parent of Arjun & Kiran, Age 11",
-      content: "The gamified approach keeps my twin boys competing with each other in a healthy way. They've both improved tremendously, and their confidence has soared!",
-      avatar: "👨‍👨‍👦‍👦"
+      content: "We've implemented DameChess in our school and seen remarkable improvements in students' concentration and problem-solving abilities across all subjects.",
+      avatar: "👩‍🏫",
+      rating: 5
     }
   ];
 
   return (
-    <section id="testimonials" className="py-20 bg-gradient-to-br from-dame-dark to-gray-800">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Success Stories
+    <section id="testimonials" className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 left-10 text-8xl text-white animate-float3d">♔</div>
+        <div className="absolute bottom-20 right-10 text-6xl text-yellow-300 animate-chess-float">♕</div>
+        <div className="absolute top-1/2 left-1/4 text-7xl text-blue-300 animate-float3d">♗</div>
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-16 animate-slide-up">
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <Star className="text-yellow-400 w-8 h-8 animate-pulse" />
+            <span className="text-yellow-400 font-semibold text-lg">Real Stories</span>
+            <Star className="text-yellow-400 w-8 h-8 animate-pulse" />
+          </div>
+          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent mb-6">
+            Parents Love Our Results
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Hear from parents and students who've transformed their chess journey with DameChess.
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            Real families sharing their amazing chess journey with DameChess
           </p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white rounded-2xl p-8 shadow-xl">
-              <div className="flex items-center mb-4">
-                <div className="flex text-dame-gold">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-current" />
-                  ))}
+            <Card 
+              key={index} 
+              className="glass-effect border-2 border-white/20 hover:border-white/40 transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 animate-scale-in"
+              style={{
+                animationDelay: `${index * 300}ms`
+              }}
+            >
+              <CardContent className="p-8">
+                <div className="flex items-center justify-between mb-6">
+                  <Quote className="text-yellow-400 w-10 h-10" />
+                  <div className="flex gap-1">
+                    {Array.from({ length: testimonial.rating }, (_, i) => (
+                      <Star key={i} className="text-yellow-400 w-5 h-5 fill-current" />
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <p className="text-gray-600 mb-6">
-                "{testimonial.content}"
-              </p>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mr-4 text-2xl">
-                  {testimonial.avatar}
+                
+                <p className="text-white mb-8 text-lg leading-relaxed font-medium">
+                  "{testimonial.content}"
+                </p>
+                
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-2xl shadow-lg">
+                    {testimonial.avatar}
+                  </div>
+                  <div>
+                    <div className="font-bold text-white text-xl">{testimonial.name}</div>
+                    <div className="text-blue-200 text-sm font-medium">{testimonial.role}</div>
+                  </div>
                 </div>
-                <div>
-                  <div className="font-semibold text-dame-dark">{testimonial.name}</div>
-                  <div className="text-sm text-gray-500">{testimonial.role}</div>
-                </div>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
 
-        {/* Success Stats */}
-        <div id="testimonial-stats" className="mt-16 text-center">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div>
-              <div className="text-4xl font-bold text-dame-gold mb-2">
-                {Math.floor(statsCounters.satisfaction)}%
+        {/* Enhanced Trust indicators */}
+        <div className="mt-20">
+          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-10 glass-effect">
+            <h3 className="text-3xl font-bold text-center text-white mb-10">Trusted by Thousands</h3>
+            <div id="testimonial-stats" className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="text-center transform hover:scale-110 transition-all">
+                <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-10 h-10 text-white" />
+                </div>
+                <div className="text-4xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent mb-2">
+                  {Math.floor(statsCounters.satisfaction * 100)}+
+                </div>
+                <div className="text-blue-200 font-medium">Happy Students Learning</div>
               </div>
-              <div className="text-gray-300">Student Satisfaction</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-dame-gold mb-2">
-                {Math.floor(statsCounters.improvement)}%
+              <div className="text-center transform hover:scale-110 transition-all">
+                <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Star className="w-10 h-10 text-white" />
+                </div>
+                <div className="text-4xl font-bold bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent mb-2">
+                  {Math.floor(statsCounters.improvement)}%
+                </div>
+                <div className="text-blue-200 font-medium">Parent Satisfaction Rate</div>
               </div>
-              <div className="text-gray-300">Academic Improvement</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-dame-gold mb-2">
-                {Math.floor(statsCounters.winners)}+
+              <div className="text-center transform hover:scale-110 transition-all">
+                <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Award className="w-10 h-10 text-white" />
+                </div>
+                <div className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent mb-2">
+                  {Math.floor(statsCounters.schools * 10)}+
+                </div>
+                <div className="text-blue-200 font-medium">School Partners</div>
               </div>
-              <div className="text-gray-300">Tournament Winners</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-dame-gold mb-2">
-                {Math.floor(statsCounters.schools)}+
-              </div>
-              <div className="text-gray-300">Partner Schools</div>
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check, User, School, Crown, Smartphone, Trophy, Award, Headphones } from "lucide-react";
+import { Check, User, Crown, Smartphone, Trophy, Award, Headphones, Star, Zap } from "lucide-react";
 
 export default function PricingSection() {
   const scrollToCTA = () => {
@@ -8,196 +8,194 @@ export default function PricingSection() {
   };
 
   return (
-    <section id="pricing" className="py-20 bg-white">
+    <section id="pricing" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-dame-dark mb-4">
-            Simple, Affordable Pricing
+        <div className="text-center mb-16 animate-slide-up">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <Star className="text-yellow-500 w-8 h-8 animate-pulse" />
+            <span className="text-yellow-600 font-semibold text-lg">Choose Your Plan</span>
+            <Star className="text-yellow-500 w-8 h-8 animate-pulse" />
+          </div>
+          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-6">
+            Simple & Affordable
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            The lowest cost for comprehensive chess education ever possible for schools and families.
+            Choose the perfect plan for your child's chess journey. Both plans include everything needed to master chess.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {/* Individual Plan */}
-          <Card className="relative hover:shadow-xl transition-all">
-            <CardHeader className="text-center pb-2">
-              <div className="w-16 h-16 bg-dame-blue rounded-xl flex items-center justify-center mx-auto mb-4">
-                <User className="text-white w-8 h-8" />
+        <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          {/* Standard Plan */}
+          <Card className="relative hover:shadow-2xl transition-all transform hover:-translate-y-2 border-2 border-blue-200 bg-white">
+            <CardHeader className="text-center pb-6 bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-t-lg">
+              <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <User className="text-blue-500 w-10 h-10" />
               </div>
-              <CardTitle className="text-2xl text-dame-dark">Individual</CardTitle>
-              <p className="text-gray-600">Perfect for single students</p>
+              <CardTitle className="text-3xl font-bold">Standard Plan</CardTitle>
+              <p className="text-blue-100 text-lg">Perfect for individual learning</p>
             </CardHeader>
-            <CardContent>
+            <CardContent className="p-8">
               <div className="text-center mb-8">
-                <div className="text-4xl font-bold text-dame-dark mb-2">
-                  ₹500<span className="text-lg text-gray-500">/month</span>
+                <div className="text-6xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
+                  ₹500
                 </div>
-                <div className="text-sm text-gray-600">Per student (10-month tenure)</div>
+                <div className="text-gray-600 text-lg">per month</div>
+                <div className="text-sm text-gray-500 mt-2">10-month program</div>
               </div>
 
               <ul className="space-y-4 mb-8">
                 <li className="flex items-center">
-                  <Check className="text-green-500 mr-3 w-4 h-4" />
-                  <span className="text-gray-700">100,000+ puzzles</span>
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-4">
+                    <Check className="text-white w-4 h-4" />
+                  </div>
+                  <span className="text-gray-700 font-medium">100,000+ interactive puzzles</span>
                 </li>
                 <li className="flex items-center">
-                  <Check className="text-green-500 mr-3 w-4 h-4" />
-                  <span className="text-gray-700">800+ video lessons</span>
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-4">
+                    <Check className="text-white w-4 h-4" />
+                  </div>
+                  <span className="text-gray-700 font-medium">800+ professional video lessons</span>
                 </li>
                 <li className="flex items-center">
-                  <Check className="text-green-500 mr-3 w-4 h-4" />
-                  <span className="text-gray-700">AI-powered curriculum</span>
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-4">
+                    <Check className="text-white w-4 h-4" />
+                  </div>
+                  <span className="text-gray-700 font-medium">Smart progress tracking</span>
                 </li>
                 <li className="flex items-center">
-                  <Check className="text-green-500 mr-3 w-4 h-4" />
-                  <span className="text-gray-700">Progress tracking</span>
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-4">
+                    <Check className="text-white w-4 h-4" />
+                  </div>
+                  <span className="text-gray-700 font-medium">Live bot practice matches</span>
                 </li>
                 <li className="flex items-center">
-                  <Check className="text-green-500 mr-3 w-4 h-4" />
-                  <span className="text-gray-700">Live bot matches</span>
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-4">
+                    <Check className="text-white w-4 h-4" />
+                  </div>
+                  <span className="text-gray-700 font-medium">Monthly tournaments & certificates</span>
+                </li>
+                <li className="flex items-center">
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-4">
+                    <Check className="text-white w-4 h-4" />
+                  </div>
+                  <span className="text-gray-700 font-medium">Cross-platform access</span>
                 </li>
               </ul>
 
               <Button 
                 onClick={scrollToCTA}
-                className="w-full bg-dame-blue text-white hover:bg-blue-700"
+                className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white text-lg py-6 hover:from-blue-600 hover:to-blue-700 transition-all transform hover:scale-105 shadow-lg rounded-xl"
               >
                 Start Free Trial
               </Button>
             </CardContent>
           </Card>
 
-          {/* School Plan - Featured */}
-          <Card className="relative hover:shadow-2xl transition-all transform scale-105 border-2 border-dame-blue">
-            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-              <div className="bg-dame-gold text-dame-dark px-4 py-2 rounded-full text-sm font-bold">
-                Most Popular
+          {/* Premium Plan - Featured */}
+          <Card className="relative hover:shadow-2xl transition-all transform hover:-translate-y-2 border-4 border-gradient-to-r from-yellow-400 to-orange-500 bg-white">
+            <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
+              <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-6 py-3 rounded-full text-lg font-bold shadow-lg">
+                🏆 Most Comprehensive
               </div>
             </div>
             
-            <CardHeader className="text-center pb-2 bg-gradient-to-br from-dame-blue to-blue-700 text-white rounded-t-lg">
-              <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto mb-4">
-                <School className="text-dame-blue w-8 h-8" />
+            <CardHeader className="text-center pb-6 bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-800 text-white rounded-t-lg mt-6">
+              <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <Crown className="text-purple-600 w-10 h-10" />
               </div>
-              <CardTitle className="text-2xl">School Program</CardTitle>
-              <p className="text-blue-100">Complete solution for schools</p>
+              <CardTitle className="text-3xl font-bold">Premium Plan</CardTitle>
+              <p className="text-purple-100 text-lg">With dedicated personal tutor</p>
             </CardHeader>
-            <CardContent className="bg-gradient-to-br from-dame-blue to-blue-700 text-white">
+            <CardContent className="p-8">
               <div className="text-center mb-8">
-                <div className="text-4xl font-bold mb-2">
-                  ₹300<span className="text-lg text-blue-200">/month</span>
+                <div className="text-6xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
+                  ₹25,000
                 </div>
-                <div className="text-sm text-blue-200">Per student (School receives ₹200 retainer)</div>
+                <div className="text-gray-600 text-lg">per month</div>
+                <div className="text-sm text-gray-500 mt-2">Full-time dedicated tutor included</div>
               </div>
 
               <ul className="space-y-4 mb-8">
                 <li className="flex items-center">
-                  <Check className="text-dame-gold mr-3 w-4 h-4" />
-                  <span>Everything in Individual</span>
+                  <div className="w-6 h-6 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mr-4">
+                    <Check className="text-white w-4 h-4" />
+                  </div>
+                  <span className="text-gray-700 font-medium">Everything in Standard Plan</span>
                 </li>
                 <li className="flex items-center">
-                  <Check className="text-dame-gold mr-3 w-4 h-4" />
-                  <span>24 free teacher training sessions</span>
+                  <div className="w-6 h-6 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mr-4">
+                    <Zap className="text-white w-4 h-4" />
+                  </div>
+                  <span className="text-gray-700 font-medium">Dedicated full-time chess tutor</span>
                 </li>
                 <li className="flex items-center">
-                  <Check className="text-dame-gold mr-3 w-4 h-4" />
-                  <span>Classroom management tools</span>
+                  <div className="w-6 h-6 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mr-4">
+                    <Star className="text-white w-4 h-4" />
+                  </div>
+                  <span className="text-gray-700 font-medium">Personalized 1-on-1 coaching</span>
                 </li>
                 <li className="flex items-center">
-                  <Check className="text-dame-gold mr-3 w-4 h-4" />
-                  <span>Data dashboards</span>
+                  <div className="w-6 h-6 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mr-4">
+                    <Trophy className="text-white w-4 h-4" />
+                  </div>
+                  <span className="text-gray-700 font-medium">Advanced tournament preparation</span>
                 </li>
                 <li className="flex items-center">
-                  <Check className="text-dame-gold mr-3 w-4 h-4" />
-                  <span>Tournament creation</span>
+                  <div className="w-6 h-6 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mr-4">
+                    <Crown className="text-white w-4 h-4" />
+                  </div>
+                  <span className="text-gray-700 font-medium">Priority 24/7 support</span>
                 </li>
                 <li className="flex items-center">
-                  <Check className="text-dame-gold mr-3 w-4 h-4" />
-                  <span>School revenue sharing</span>
+                  <div className="w-6 h-6 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mr-4">
+                    <Award className="text-white w-4 h-4" />
+                  </div>
+                  <span className="text-gray-700 font-medium">Custom learning roadmap</span>
                 </li>
               </ul>
 
               <Button 
                 onClick={scrollToCTA}
-                className="w-full bg-dame-gold text-dame-dark hover:bg-yellow-400"
+                className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-lg py-6 hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105 shadow-lg rounded-xl"
               >
-                Contact for Demo
-              </Button>
-            </CardContent>
-          </Card>
-
-          {/* Premium Plan */}
-          <Card className="relative hover:shadow-xl transition-all">
-            <CardHeader className="text-center pb-2">
-              <div className="w-16 h-16 bg-dame-red rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Crown className="text-white w-8 h-8" />
-              </div>
-              <CardTitle className="text-2xl text-dame-dark">Premium</CardTitle>
-              <p className="text-gray-600">With dedicated tutor</p>
-            </CardHeader>
-            <CardContent>
-              <div className="text-center mb-8">
-                <div className="text-4xl font-bold text-dame-dark mb-2">
-                  ₹25,000<span className="text-lg text-gray-500">/month</span>
-                </div>
-                <div className="text-sm text-gray-600">Full-time chess tutor included</div>
-              </div>
-
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center">
-                  <Check className="text-green-500 mr-3 w-4 h-4" />
-                  <span className="text-gray-700">Everything in School Program</span>
-                </li>
-                <li className="flex items-center">
-                  <Check className="text-green-500 mr-3 w-4 h-4" />
-                  <span className="text-gray-700">Dedicated full-time tutor</span>
-                </li>
-                <li className="flex items-center">
-                  <Check className="text-green-500 mr-3 w-4 h-4" />
-                  <span className="text-gray-700">Personalized coaching</span>
-                </li>
-                <li className="flex items-center">
-                  <Check className="text-green-500 mr-3 w-4 h-4" />
-                  <span className="text-gray-700">Advanced tournament prep</span>
-                </li>
-                <li className="flex items-center">
-                  <Check className="text-green-500 mr-3 w-4 h-4" />
-                  <span className="text-gray-700">Priority support</span>
-                </li>
-              </ul>
-
-              <Button 
-                onClick={scrollToCTA}
-                className="w-full bg-dame-red text-white hover:bg-red-700"
-              >
-                Contact Sales
+                Contact for Personal Tutor
               </Button>
             </CardContent>
           </Card>
         </div>
 
-        {/* Additional Benefits */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-dame-blue to-dame-red rounded-3xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">All Plans Include</h3>
-            <div className="grid md:grid-cols-4 gap-6">
-              <div className="flex flex-col items-center">
-                <Smartphone className="w-8 h-8 mb-2" />
-                <span>Cross-platform access</span>
+        {/* Trust Indicators */}
+        <div className="mt-20 text-center">
+          <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-3xl p-10 text-white shadow-2xl">
+            <h3 className="text-3xl font-bold mb-8">What You Get With Both Plans</h3>
+            <div className="grid md:grid-cols-4 gap-8">
+              <div className="flex flex-col items-center transform hover:scale-110 transition-all">
+                <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-4">
+                  <Smartphone className="w-8 h-8" />
+                </div>
+                <span className="font-semibold text-lg">Any Device Access</span>
+                <span className="text-sm opacity-80">Phone, tablet, computer</span>
               </div>
-              <div className="flex flex-col items-center">
-                <Trophy className="w-8 h-8 mb-2" />
-                <span>Monthly tournaments</span>
+              <div className="flex flex-col items-center transform hover:scale-110 transition-all">
+                <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-4">
+                  <Trophy className="w-8 h-8" />
+                </div>
+                <span className="font-semibold text-lg">Monthly Tournaments</span>
+                <span className="text-sm opacity-80">Compete & win prizes</span>
               </div>
-              <div className="flex flex-col items-center">
-                <Award className="w-8 h-8 mb-2" />
-                <span>Achievement certificates</span>
+              <div className="flex flex-col items-center transform hover:scale-110 transition-all">
+                <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-4">
+                  <Award className="w-8 h-8" />
+                </div>
+                <span className="font-semibold text-lg">Certificates</span>
+                <span className="text-sm opacity-80">Achievement recognition</span>
               </div>
-              <div className="flex flex-col items-center">
-                <Headphones className="w-8 h-8 mb-2" />
-                <span>24/7 support</span>
+              <div className="flex flex-col items-center transform hover:scale-110 transition-all">
+                <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-4">
+                  <Headphones className="w-8 h-8" />
+                </div>
+                <span className="font-semibold text-lg">Expert Support</span>
+                <span className="text-sm opacity-80">Always here to help</span>
               </div>
             </div>
           </div>

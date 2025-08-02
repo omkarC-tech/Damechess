@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Crown } from "lucide-react";
+import { Menu, Crown, Sparkles } from "lucide-react";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,55 +15,64 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="bg-white shadow-lg fixed w-full top-0 z-50">
+    <nav className="glass-effect backdrop-blur-xl fixed w-full top-0 z-50 border-b border-white/20">
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
-          {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center relative">
-              <div className="text-white text-2xl">♗</div>
-              <Crown className="absolute -top-2 -right-1 text-dame-gold text-lg w-5 h-5" />
+        <div className="flex justify-between items-center py-6">
+          {/* Modern Logo */}
+          <div className="flex items-center space-x-4">
+            <div className="relative perspective-3d">
+              <div className="w-14 h-14 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-2xl flex items-center justify-center shadow-2xl transform-3d hover:scale-110 transition-all duration-300">
+                <div className="text-white text-3xl animate-chess-float">♔</div>
+                <div className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
+                  <Crown className="text-white w-3 h-3" />
+                </div>
+              </div>
             </div>
             <div>
               <div className="flex items-center">
-                <span className="text-dame-blue font-bold text-xl">D</span>
-                <span className="text-white bg-dame-blue px-1 rounded text-xl font-bold">A</span>
-                <span className="text-dame-red font-bold text-xl">ME</span>
+                <span className="text-3xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                  DameChess
+                </span>
               </div>
               <div className="text-sm text-gray-600 font-medium">Chess Academy</div>
             </div>
           </div>
 
-          {/* Desktop Navigation */}
+          {/* Modern Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection('features')}
-              className="text-gray-700 hover:text-dame-blue font-medium transition-colors"
+              className="text-gray-700 hover:text-indigo-600 font-semibold transition-all hover:scale-105 relative group"
             >
               Features
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
             </button>
             <button 
               onClick={() => scrollToSection('benefits')}
-              className="text-gray-700 hover:text-dame-blue font-medium transition-colors"
+              className="text-gray-700 hover:text-indigo-600 font-semibold transition-all hover:scale-105 relative group"
             >
               Benefits
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
             </button>
             <button 
               onClick={() => scrollToSection('pricing')}
-              className="text-gray-700 hover:text-dame-blue font-medium transition-colors"
+              className="text-gray-700 hover:text-indigo-600 font-semibold transition-all hover:scale-105 relative group"
             >
               Pricing
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
             </button>
             <button 
               onClick={() => scrollToSection('testimonials')}
-              className="text-gray-700 hover:text-dame-blue font-medium transition-colors"
+              className="text-gray-700 hover:text-indigo-600 font-semibold transition-all hover:scale-105 relative group"
             >
               Stories
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
             </button>
             <Button 
               onClick={() => scrollToSection('cta')}
-              className="bg-dame-blue text-white hover:bg-blue-700 transition-all transform hover:scale-105"
+              className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700 px-6 py-3 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300"
             >
+              <Sparkles className="mr-2 w-5 h-5" />
               Start Free Trial
             </Button>
           </div>
