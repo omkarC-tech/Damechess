@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(240, 10%, 3.9%);
+  --muted: hsl(240, 4.8%, 95.9%);
+  --muted-foreground: hsl(240, 3.7%, 64.9%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(240, 10%, 3.9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(240, 10%, 3.9%);
+  --border: hsl(240, 5.9%, 90%);
+  --input: hsl(240, 5.9%, 90%);
+  --primary: hsl(221, 83%, 53%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(210, 40%, 96%);
+  --secondary-foreground: hsl(222, 84%, 4.9%);
+  --accent: hsl(210, 40%, 96%);
+  --accent-foreground: hsl(222, 84%, 4.9%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(221, 83%, 53%);
+  --radius: 0.5rem;
+  
+  /* DameChess Brand Colors */
+  --dame-blue: hsl(224, 76%, 48%);
+  --dame-red: hsl(0, 74%, 42%);
+  --dame-gold: hsl(43, 96%, 56%);
+  --dame-dark: hsl(220, 26%, 14%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(221, 83%, 53%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .dame-blue {
+    color: hsl(224, 76%, 48%);
+  }
+  
+  .dame-red {
+    color: hsl(0, 74%, 42%);
+  }
+  
+  .dame-gold {
+    color: hsl(43, 96%, 56%);
+  }
+  
+  .dame-dark {
+    color: hsl(220, 26%, 14%);
+  }
+  
+  .bg-dame-blue {
+    background-color: hsl(224, 76%, 48%);
+  }
+  
+  .bg-dame-red {
+    background-color: hsl(0, 74%, 42%);
+  }
+  
+  .bg-dame-gold {
+    background-color: hsl(43, 96%, 56%);
+  }
+  
+  .bg-dame-dark {
+    background-color: hsl(220, 26%, 14%);
+  }
+}
+
+/* Animation keyframes */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25%);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s infinite;
+}
+
+/* Chess piece animations */
+.chess-piece {
+  transition: all 0.3s ease;
+}
+
+.chess-piece:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(240, 4.8%, 95.9%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(224, 76%, 48%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(224, 76%, 40%);
+}
