@@ -4,27 +4,30 @@ import { Mail, Phone, MapPin, Play } from "lucide-react";
 
 export default function CTASection() {
   return (
-    <section id="cta" className="py-20 bg-gradient-to-r from-dame-blue to-dame-red">
+    <section id="cta" className="py-20 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
+          <div className="mb-6">
+            <span className="bg-white/20 text-white px-6 py-2 rounded-full text-lg font-semibold">Join the Adventure</span>
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Start Your Chess Journey?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Join thousands of kids and teens who are already mastering chess with our AI-powered platform. Start your free trial today!
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            Join thousands of kids and teens who are already mastering chess with our interactive platform. Start your free trial today!
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button 
               size="lg"
-              className="bg-dame-gold text-dame-dark px-8 py-4 text-lg font-bold hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg"
+              className="bg-yellow-400 text-purple-900 px-8 py-4 text-lg font-bold hover:bg-yellow-300 transition-all transform hover:scale-105 shadow-lg"
             >
               Start Free Trial - No Credit Card Required
             </Button>
             <Button 
               size="lg"
               variant="outline" 
-              className="border-2 border-white text-white px-8 py-4 text-lg font-bold hover:bg-white hover:text-dame-blue transition-all"
+              className="border-2 border-white text-white px-8 py-4 text-lg font-bold hover:bg-white hover:text-purple-600 transition-all"
             >
               <Play className="mr-2 h-5 w-5" />
               Schedule Demo

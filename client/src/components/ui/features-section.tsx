@@ -54,94 +54,42 @@ export default function FeaturesSection() {
             </div>
           </div>
 
-          {/* AI Dashboard Mockup */}
-          <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8 shadow-2xl">
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <div className="flex items-center justify-between mb-6">
-                <h4 className="text-lg font-semibold">Student Progress</h4>
-                <div className="flex space-x-2">
-                  <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                  <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                  <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                </div>
-              </div>
-              
-              {/* Progress Chart Mockup */}
-              <div className="space-y-4">
-                <div>
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-sm text-gray-600">Chess Fundamentals</span>
-                    <span className="text-sm font-semibold text-dame-blue">95%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
-                    <div className="bg-dame-blue h-2 rounded-full" style={{width: '95%'}}></div>
-                  </div>
-                </div>
-
-                <div>
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-sm text-gray-600">Tactical Puzzles</span>
-                    <span className="text-sm font-semibold text-dame-gold">78%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
-                    <div className="bg-dame-gold h-2 rounded-full" style={{width: '78%'}}></div>
-                  </div>
-                </div>
-
-                <div>
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-sm text-gray-600">Endgame Strategy</span>
-                    <span className="text-sm font-semibold text-dame-red">42%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
-                    <div className="bg-dame-red h-2 rounded-full" style={{width: '42%'}}></div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Achievement Badges */}
-              <div className="mt-6 pt-6 border-t border-gray-100">
-                <h5 className="text-sm font-semibold text-gray-700 mb-3">Recent Achievements</h5>
-                <div className="flex space-x-3">
-                  <div className="w-8 h-8 bg-dame-gold rounded-full flex items-center justify-center">
-                    <Trophy className="text-white w-4 h-4" />
-                  </div>
-                  <div className="w-8 h-8 bg-dame-blue rounded-full flex items-center justify-center">
-                    <Brain className="text-white w-4 h-4" />
-                  </div>
-                  <div className="w-8 h-8 bg-dame-red rounded-full flex items-center justify-center">
-                    <TrendingUp className="text-white w-4 h-4" />
-                  </div>
-                </div>
-              </div>
+          {/* Interactive Learning Demo */}
+          <div className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-3xl p-8 shadow-2xl">
+            <div className="text-center">
+              <div className="text-6xl mb-6">🎯</div>
+              <h4 className="text-2xl font-bold text-purple-700 mb-4">Interactive Learning</h4>
+              <p className="text-purple-600 text-lg">
+                Experience chess like never before with our fun, interactive approach designed specifically for young minds.
+              </p>
             </div>
           </div>
         </div>
 
         {/* Feature Grid */}
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
-            <div className="w-16 h-16 bg-dame-blue rounded-xl flex items-center justify-center mx-auto mb-4">
+          <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow hover:scale-105 transform duration-300">
+            <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
               <Puzzle className="text-white w-8 h-8" />
             </div>
-            <h3 className="text-xl font-bold text-dame-dark mb-3">100,000+ Puzzles</h3>
-            <p className="text-gray-600">From beginner to advanced levels, our vast puzzle library keeps learning engaging and challenging.</p>
+            <h3 className="text-xl font-bold text-purple-700 mb-3">100,000+ Puzzles</h3>
+            <p className="text-purple-600">From beginner to advanced levels, our vast puzzle library keeps learning engaging and challenging.</p>
           </div>
 
-          <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
-            <div className="w-16 h-16 bg-dame-red rounded-xl flex items-center justify-center mx-auto mb-4">
+          <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow hover:scale-105 transform duration-300">
+            <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center mx-auto mb-4">
               <Play className="text-white w-8 h-8" />
             </div>
-            <h3 className="text-xl font-bold text-dame-dark mb-3">800+ Video Lessons</h3>
-            <p className="text-gray-600">Interactive video content taught by expert chess masters, designed specifically for young learners.</p>
+            <h3 className="text-xl font-bold text-orange-700 mb-3">800+ Video Lessons</h3>
+            <p className="text-orange-600">Interactive video content taught by expert chess masters, designed specifically for young learners.</p>
           </div>
 
-          <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
-            <div className="w-16 h-16 bg-dame-gold rounded-xl flex items-center justify-center mx-auto mb-4">
+          <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow hover:scale-105 transform duration-300">
+            <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-400 rounded-xl flex items-center justify-center mx-auto mb-4">
               <Bot className="text-white w-8 h-8" />
             </div>
-            <h3 className="text-xl font-bold text-dame-dark mb-3">AI Bot Matches</h3>
-            <p className="text-gray-600">Practice against kid-friendly AI opponents that adapt to your skill level for optimal learning.</p>
+            <h3 className="text-xl font-bold text-yellow-700 mb-3">Smart Practice</h3>
+            <p className="text-yellow-600">Practice against kid-friendly opponents that adapt to your skill level for optimal learning.</p>
           </div>
         </div>
       </div>

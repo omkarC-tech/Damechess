@@ -69,7 +69,7 @@ export default function HeroSection() {
       
       {/* Animated 3D Chess Pieces Background */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-10 text-8xl text-white animate-float3d chess-piece">♔</div>
+        <div className="absolute top-1/4 left-10 text-8xl text-white animate-float3d chess-piece">♔</div>
         <div className="absolute top-40 right-20 text-6xl text-yellow-300 animate-chess-float chess-piece" style={{animationDelay: '1s'}}>♕</div>
         <div className="absolute bottom-32 left-1/4 text-7xl text-blue-300 animate-float3d chess-piece" style={{animationDelay: '2s'}}>♖</div>
         <div className="absolute bottom-40 right-10 text-9xl text-purple-300 animate-chess-float chess-piece" style={{animationDelay: '0.5s'}}>♗</div>
@@ -152,20 +152,19 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Professional Hero Image */}
-          <div className="flex justify-center animate-scale-in">
-            <div className="relative">
-              <div className="w-96 h-96 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-3xl shadow-2xl flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-8xl mb-6 text-indigo-600">♔</div>
-                  <h3 className="text-2xl font-bold text-indigo-700">Master Chess</h3>
-                  <p className="text-indigo-600">Strategic Thinking for Life</p>
-                </div>
-              </div>
-              
-              {/* Subtle floating elements */}
-              <div className="absolute -top-4 -right-4 text-3xl text-indigo-500 animate-float3d">♕</div>
-              <div className="absolute -bottom-4 -left-4 text-3xl text-indigo-500 animate-float3d" style={{animationDelay: '1s'}}>♗</div>
+          {/* Stats Display */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-scale-in">
+            <div className="text-center bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-300/30">
+              <div className="text-4xl font-bold text-yellow-400 mb-2">100,000+</div>
+              <div className="text-white">Chess Puzzles</div>
+            </div>
+            <div className="text-center bg-gradient-to-br from-blue-500/20 to-cyan-500/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-300/30">
+              <div className="text-4xl font-bold text-yellow-400 mb-2">800+</div>
+              <div className="text-white">Video Lessons</div>
+            </div>
+            <div className="text-center bg-gradient-to-br from-green-500/20 to-teal-500/20 backdrop-blur-sm rounded-2xl p-8 border border-green-300/30">
+              <div className="text-4xl font-bold text-yellow-400 mb-2">10,000+</div>
+              <div className="text-white">Happy Students</div>
             </div>
           </div>
         </div>

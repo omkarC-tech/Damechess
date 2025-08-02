@@ -8,13 +8,13 @@ export default function PricingSection() {
   };
 
   return (
-    <section id="pricing" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section id="pricing" className="py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-slide-up">
           <div className="mb-4">
-            <span className="text-indigo-600 font-semibold text-lg">Choose Your Plan</span>
+            <span className="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-6 py-2 rounded-full text-lg font-semibold">Choose Your Plan</span>
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent mb-6">
+          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent mb-6">
             Simple & Affordable
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">

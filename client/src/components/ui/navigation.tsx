@@ -16,7 +16,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="glass-effect backdrop-blur-xl fixed w-full top-0 z-50 border-b border-white/20">
+    <nav className="bg-gradient-to-r from-purple-900/95 to-pink-900/95 backdrop-blur-xl fixed w-full top-0 z-50 border-b border-purple-500/30 shadow-xl">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-6">
           {/* Professional Logo */}
@@ -26,7 +26,7 @@ export default function Navigation() {
               alt="Dame Chess Academy Logo" 
               className="w-12 h-12 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
             />
-            <div className="text-xl font-bold text-gray-800">
+            <div className="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
               Dame Chess Academy
             </div>
           </div>
@@ -35,35 +35,35 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection('features')}
-              className="text-gray-700 hover:text-indigo-600 font-semibold transition-all hover:scale-105 relative group"
+              className="text-white hover:text-yellow-300 font-semibold transition-all hover:scale-105 relative group"
             >
               Features
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-yellow-400 to-orange-400 group-hover:w-full transition-all duration-300"></span>
             </button>
             <button 
               onClick={() => scrollToSection('benefits')}
-              className="text-gray-700 hover:text-indigo-600 font-semibold transition-all hover:scale-105 relative group"
+              className="text-white hover:text-yellow-300 font-semibold transition-all hover:scale-105 relative group"
             >
               Benefits
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-yellow-400 to-orange-400 group-hover:w-full transition-all duration-300"></span>
             </button>
             <button 
               onClick={() => scrollToSection('pricing')}
-              className="text-gray-700 hover:text-indigo-600 font-semibold transition-all hover:scale-105 relative group"
+              className="text-white hover:text-yellow-300 font-semibold transition-all hover:scale-105 relative group"
             >
               Pricing
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-yellow-400 to-orange-400 group-hover:w-full transition-all duration-300"></span>
             </button>
             <button 
               onClick={() => scrollToSection('testimonials')}
-              className="text-gray-700 hover:text-indigo-600 font-semibold transition-all hover:scale-105 relative group"
+              className="text-white hover:text-yellow-300 font-semibold transition-all hover:scale-105 relative group"
             >
               Stories
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-yellow-400 to-orange-400 group-hover:w-full transition-all duration-300"></span>
             </button>
             <Button 
               onClick={() => scrollToSection('cta')}
-              className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 px-6 py-3 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300"
+              className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white hover:from-yellow-600 hover:to-orange-600 px-6 py-3 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300"
             >
               Start Free Trial
             </Button>

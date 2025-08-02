@@ -2,14 +2,17 @@ import { Brain, Eye, GraduationCap, Zap, Lightbulb, Users } from "lucide-react";
 
 export default function BenefitsSection() {
   return (
-    <section id="benefits" className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+    <section id="benefits" className="py-20 bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-dame-dark mb-4">
+          <div className="mb-6">
+            <span className="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-6 py-2 rounded-full text-lg font-semibold">Fun & Engaging</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent mb-4">
             Why Kids Love Chess
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Chess isn't just a game—it's a powerful tool that develops critical life skills while having fun.
+            Chess isn't just a game—it's a powerful tool that develops critical life skills while having amazing fun and achieving exciting milestones.
           </p>
         </div>
 
