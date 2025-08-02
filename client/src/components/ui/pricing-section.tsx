@@ -11,12 +11,10 @@ export default function PricingSection() {
     <section id="pricing" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-slide-up">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Star className="text-yellow-500 w-8 h-8 animate-pulse" />
-            <span className="text-yellow-600 font-semibold text-lg">Choose Your Plan</span>
-            <Star className="text-yellow-500 w-8 h-8 animate-pulse" />
+          <div className="mb-4">
+            <span className="text-indigo-600 font-semibold text-lg">Choose Your Plan</span>
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-6">
+          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent mb-6">
             Simple & Affordable
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">

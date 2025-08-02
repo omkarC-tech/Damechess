@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Crown, Sparkles } from "lucide-react";
+import { Menu } from "lucide-react";
+import logoImage from "@assets/logodamechess_1754125181154.jpg";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,23 +19,15 @@ export default function Navigation() {
     <nav className="glass-effect backdrop-blur-xl fixed w-full top-0 z-50 border-b border-white/20">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-6">
-          {/* Modern Logo */}
-          <div className="flex items-center space-x-4">
-            <div className="relative perspective-3d">
-              <div className="w-14 h-14 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-2xl flex items-center justify-center shadow-2xl transform-3d hover:scale-110 transition-all duration-300">
-                <div className="text-white text-3xl animate-chess-float">♔</div>
-                <div className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
-                  <Crown className="text-white w-3 h-3" />
-                </div>
-              </div>
-            </div>
-            <div>
-              <div className="flex items-center">
-                <span className="text-3xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                  DameChess
-                </span>
-              </div>
-              <div className="text-sm text-gray-600 font-medium">Chess Academy</div>
+          {/* Professional Logo */}
+          <div className="flex items-center space-x-3">
+            <img 
+              src={logoImage} 
+              alt="Dame Chess Academy Logo" 
+              className="w-12 h-12 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+            />
+            <div className="text-xl font-bold text-gray-800">
+              Dame Chess Academy
             </div>
           </div>
 
@@ -70,9 +63,8 @@ export default function Navigation() {
             </button>
             <Button 
               onClick={() => scrollToSection('cta')}
-              className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700 px-6 py-3 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300"
+              className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 px-6 py-3 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300"
             >
-              <Sparkles className="mr-2 w-5 h-5" />
               Start Free Trial
             </Button>
           </div>
@@ -112,7 +104,7 @@ export default function Navigation() {
                 </button>
                 <Button 
                   onClick={() => scrollToSection('cta')}
-                  className="bg-dame-blue text-white hover:bg-blue-700 w-full"
+                  className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 w-full rounded-xl"
                 >
                   Start Free Trial
                 </Button>

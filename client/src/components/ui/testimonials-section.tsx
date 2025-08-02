@@ -93,10 +93,8 @@ export default function TestimonialsSection() {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-slide-up">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <Star className="text-yellow-400 w-8 h-8 animate-pulse" />
+          <div className="mb-6">
             <span className="text-yellow-400 font-semibold text-lg">Real Stories</span>
-            <Star className="text-yellow-400 w-8 h-8 animate-pulse" />
           </div>
           <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent mb-6">
             Parents Love Our Results

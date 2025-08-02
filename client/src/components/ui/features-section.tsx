@@ -6,10 +6,10 @@ export default function FeaturesSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-dame-dark mb-4">
-            AI-Powered Chess Learning
+            Interactive Chess Learning
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our revolutionary AI curriculum adapts to each student's learning pace, ensuring personalized growth and maximum engagement.
+            Our comprehensive curriculum adapts to each student's learning pace, ensuring personalized growth and maximum engagement through interactive lessons.
           </p>
         </div>
 
@@ -18,7 +18,7 @@ export default function FeaturesSection() {
           <div>
             <h3 className="text-3xl font-bold text-dame-dark mb-6">Smart Progress Tracking</h3>
             <p className="text-lg text-gray-600 mb-8">
-              Our AI analyzes your child's performance across 100,000+ puzzles and 800+ video lessons to create a personalized learning path that evolves with their skills.
+              Track your child's performance across 100,000+ puzzles and 800+ video lessons with our comprehensive learning system that creates a personalized path that evolves with their skills.
             </p>
             
             <div className="space-y-6">
@@ -28,7 +28,7 @@ export default function FeaturesSection() {
                 </div>
                 <div>
                   <h4 className="text-xl font-semibold text-dame-dark">Adaptive Learning</h4>
-                  <p className="text-gray-600">AI adjusts difficulty based on performance</p>
+                  <p className="text-gray-600">System adjusts difficulty based on performance</p>
                 </div>
               </div>
               

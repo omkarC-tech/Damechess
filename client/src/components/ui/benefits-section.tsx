@@ -65,49 +65,7 @@ export default function BenefitsSection() {
         </div>
 
         {/* Academic Performance Highlight */}
-        <div className="bg-white rounded-3xl p-12 shadow-xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-3xl font-bold text-dame-dark mb-6">Proven Academic Results</h3>
-              <p className="text-lg text-gray-600 mb-8">
-                Research consistently shows that students who learn chess demonstrate significant improvements in academic performance, particularly in mathematics and reading comprehension.
-              </p>
-              
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-dame-blue mb-2">23%</div>
-                  <div className="text-sm text-gray-600">Improvement in Math Scores</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-dame-red mb-2">18%</div>
-                  <div className="text-sm text-gray-600">Better Reading Comprehension</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-dame-gold mb-2">35%</div>
-                  <div className="text-sm text-gray-600">Increased Attention Span</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-600 mb-2">42%</div>
-                  <div className="text-sm text-gray-600">Better Problem Solving</div>
-                </div>
-              </div>
-            </div>
 
-            <div className="flex justify-center">
-              <div className="relative w-full max-w-md">
-                <div className="w-full h-64 bg-gradient-to-br from-dame-blue to-blue-600 rounded-2xl shadow-lg flex items-center justify-center">
-                  <div className="text-center text-white">
-                    <div className="text-6xl mb-4">📚</div>
-                    <div className="text-lg font-semibold">Students at School</div>
-                    <div className="text-sm opacity-90">Learning Chess Together</div>
-                  </div>
-                </div>
-                <div className="absolute -bottom-4 -right-4 text-6xl chess-piece">♔</div>
-                <div className="absolute -top-4 -left-4 text-4xl chess-piece">♗</div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

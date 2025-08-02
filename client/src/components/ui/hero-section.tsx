@@ -77,17 +77,17 @@ export default function HeroSection() {
         <div className="absolute top-1/3 right-1/3 text-5xl text-red-300 animate-chess-float chess-piece" style={{animationDelay: '3s'}}>♙</div>
       </div>
 
-      {/* Floating Particles */}
+      {/* Subtle Floating Particles */}
       <div className="absolute inset-0">
-        {Array.from({ length: 20 }, (_, i) => (
+        {Array.from({ length: 8 }, (_, i) => (
           <div
             key={i}
-            className="absolute w-2 h-2 bg-white/30 rounded-full animate-float3d"
+            className="absolute w-1 h-1 bg-white/20 rounded-full animate-float3d"
             style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${3 + Math.random() * 4}s`
+              top: `${20 + Math.random() * 60}%`,
+              left: `${10 + Math.random() * 80}%`,
+              animationDelay: `${i * 2}s`,
+              animationDuration: `6s`
             }}
           />
         ))}
@@ -97,7 +97,6 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
           <div className="text-white animate-slide-up">
             <div className="flex items-center gap-3 mb-6">
-              <Sparkles className="text-yellow-400 w-8 h-8 animate-pulse" />
               <span className="text-yellow-400 font-semibold text-lg">Transform Your Child's Mind</span>
             </div>
             
@@ -115,10 +114,9 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <Button 
                 onClick={scrollToCTA}
-                className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-10 py-6 text-xl font-bold hover:from-yellow-300 hover:to-orange-400 transition-all transform hover:scale-105 shadow-2xl rounded-2xl"
+                className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-10 py-6 text-xl font-bold hover:from-blue-600 hover:to-indigo-700 transition-all transform hover:scale-105 shadow-2xl rounded-2xl"
                 size="lg"
               >
-                <Zap className="mr-3 h-6 w-6" />
                 Start Free Journey
               </Button>
               <Button 
@@ -127,7 +125,7 @@ export default function HeroSection() {
                 size="lg"
               >
                 <Play className="mr-3 h-6 w-6" />
-                Watch Magic
+                Watch Demo
               </Button>
             </div>
             
@@ -154,50 +152,20 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Revolutionary 3D Chess Experience */}
-          <div className="flex justify-center animate-scale-in perspective-3d">
-            <div className="relative transform-3d">
-              {/* Main 3D Chess Board */}
-              <div className="relative">
-                <div className="w-96 h-96 bg-gradient-to-br from-amber-200 via-amber-300 to-amber-100 rounded-3xl shadow-2xl transform rotate-12 hover:rotate-6 transition-all duration-700 transform-3d">
-                  {/* Glowing effect */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 to-orange-500/20 rounded-3xl blur-xl"></div>
-                  
-                  {/* Chess Board Pattern with 3D effect */}
-                  <div className="relative grid grid-cols-8 grid-rows-8 w-full h-full rounded-3xl overflow-hidden">
-                    {Array.from({ length: 64 }, (_, i) => {
-                      const row = Math.floor(i / 8);
-                      const col = i % 8;
-                      const isLight = (row + col) % 2 === 0;
-                      return (
-                        <div 
-                          key={i} 
-                          className={`${isLight ? "bg-amber-100 hover:bg-amber-200" : "bg-amber-800 hover:bg-amber-700"} transition-colors duration-300 transform hover:scale-105`}
-                        />
-                      );
-                    })}
-                  </div>
-                  
-                  {/* Shimmer effect */}
-                  <div className="absolute inset-0 shimmer-bg animate-shimmer opacity-30 rounded-3xl"></div>
-                </div>
-                
-                {/* Floating 3D Chess Pieces with enhanced animations */}
-                <div className="absolute -top-8 -left-8 text-6xl animate-float3d chess-piece filter drop-shadow-lg">👑</div>
-                <div className="absolute -top-6 -right-10 text-7xl animate-chess-float chess-piece filter drop-shadow-lg" style={{animationDelay: '1s'}}>♗</div>
-                <div className="absolute -bottom-10 -left-6 text-6xl animate-float3d chess-piece filter drop-shadow-lg" style={{animationDelay: '2s'}}>♘</div>
-                <div className="absolute -bottom-8 -right-8 text-7xl animate-chess-float chess-piece filter drop-shadow-lg" style={{animationDelay: '0.5s'}}>♖</div>
-                
-                {/* Orbiting elements */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <div className="w-24 h-24 animate-rotate3d">
-                    <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full absolute top-0 left-1/2 transform -translate-x-1/2 shadow-lg"></div>
-                    <div className="w-6 h-6 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full absolute bottom-0 left-1/2 transform -translate-x-1/2 shadow-lg"></div>
-                    <div className="w-7 h-7 bg-gradient-to-r from-green-400 to-teal-500 rounded-full absolute top-1/2 right-0 transform -translate-y-1/2 shadow-lg"></div>
-                    <div className="w-5 h-5 bg-gradient-to-r from-pink-400 to-red-500 rounded-full absolute top-1/2 left-0 transform -translate-y-1/2 shadow-lg"></div>
-                  </div>
+          {/* Professional Hero Image */}
+          <div className="flex justify-center animate-scale-in">
+            <div className="relative">
+              <div className="w-96 h-96 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-3xl shadow-2xl flex items-center justify-center">
+                <div className="text-center">
+                  <div className="text-8xl mb-6 text-indigo-600">♔</div>
+                  <h3 className="text-2xl font-bold text-indigo-700">Master Chess</h3>
+                  <p className="text-indigo-600">Strategic Thinking for Life</p>
                 </div>
               </div>
+              
+              {/* Subtle floating elements */}
+              <div className="absolute -top-4 -right-4 text-3xl text-indigo-500 animate-float3d">♕</div>
+              <div className="absolute -bottom-4 -left-4 text-3xl text-indigo-500 animate-float3d" style={{animationDelay: '1s'}}>♗</div>
             </div>
           </div>
         </div>
