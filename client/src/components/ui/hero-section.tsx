@@ -96,7 +96,7 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
           <div className="text-white animate-slide-up">
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-3 mb-6 mt-12">
               <span className="text-yellow-400 font-semibold text-lg">Transform Your Child's Mind</span>
             </div>
             
@@ -152,19 +152,19 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Stats Display */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-scale-in">
-            <div className="text-center bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-300/30 hover:scale-105 hover:bg-purple-500/30 transition-all duration-500 cursor-pointer transform hover:-translate-y-2 hover:shadow-2xl">
+          {/* Stats Display - Simple Numbers */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-scale-in mt-8">
+            <div className="text-center">
               <div className="text-4xl font-bold text-yellow-400 mb-2">100,000+</div>
-              <div className="text-white">Chess Puzzles</div>
+              <div className="text-white/80">Chess Puzzles</div>
             </div>
-            <div className="text-center bg-gradient-to-br from-blue-500/20 to-cyan-500/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-300/30 hover:scale-105 hover:bg-blue-500/30 transition-all duration-500 cursor-pointer transform hover:-translate-y-2 hover:shadow-2xl">
+            <div className="text-center">
               <div className="text-4xl font-bold text-yellow-400 mb-2">800+</div>
-              <div className="text-white">Video Lessons</div>
+              <div className="text-white/80">Video Lessons</div>
             </div>
-            <div className="text-center bg-gradient-to-br from-green-500/20 to-teal-500/20 backdrop-blur-sm rounded-2xl p-8 border border-green-300/30 hover:scale-105 hover:bg-green-500/30 transition-all duration-500 cursor-pointer transform hover:-translate-y-2 hover:shadow-2xl">
+            <div className="text-center">
               <div className="text-4xl font-bold text-yellow-400 mb-2">10,000+</div>
-              <div className="text-white">Happy Students</div>
+              <div className="text-white/80">Happy Students</div>
             </div>
           </div>
         </div>
