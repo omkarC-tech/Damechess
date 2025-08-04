@@ -4,30 +4,49 @@ import { Mail, Phone, MapPin, Play } from "lucide-react";
 
 export default function CTASection() {
   return (
-    <section id="cta" className="py-20 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500">
-      <div className="container mx-auto px-4">
+    <section id="cta" className="py-20 relative overflow-hidden min-h-screen">
+      {/* 🎯 Background Chess Image */}
+      <div
+        className="absolute inset-0 z-0 bg-cover bg-center opacity-30"
+        style={{
+          backgroundImage:
+            "url('https://res.cloudinary.com/dk5dqdowr/image/upload/v1754316754/chess_wmldfm.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          filter: "grayscale(100%) contrast(110%) blur(1px)",
+        }}
+      />
+
+      {/* 🎨 Gradient Overlay */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-r from-purple-700/50 via-pink-600/40 to-orange-500/30" />
+
+      {/* 👀 Foreground Content */}
+      <div className="relative z-10 container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="mb-6">
-            <span className="bg-white/20 text-white px-6 py-2 rounded-full text-lg font-semibold">Join the Adventure</span>
+            <span className="bg-white/20 text-white px-6 py-2 rounded-full text-lg font-semibold">
+              Join the Adventure
+            </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Start Your Chess Journey?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Join thousands of kids and teens who are already mastering chess with our interactive platform. Start your free trial today!
+            Join thousands of kids and teens who are already mastering chess
+            with our interactive platform. Start your free trial today!
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button 
+            <Button
               size="lg"
               className="bg-yellow-400 text-purple-900 px-8 py-4 text-lg font-bold hover:bg-yellow-300 transition-all transform hover:scale-105 shadow-lg"
             >
               Start Free Trial - No Credit Card Required
             </Button>
-            <Button 
+            <Button
               size="lg"
-              variant="outline" 
-              className="border-2 border-white text-white px-8 py-4 text-lg font-bold hover:bg-white hover:text-purple-600 transition-all"
+              variant="outline"
+              className="border-2 border-white text-black px-8 py-4 text-lg font-bold hover:bg-white hover:text-purple-600 transition-all"
             >
               <Play className="mr-2 h-5 w-5" />
               Schedule Demo
@@ -40,12 +59,16 @@ export default function CTASection() {
           <div className="bg-white rounded-3xl p-8 shadow-2xl">
             <div className="grid lg:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-2xl font-bold text-dame-dark mb-6">Get Started Today</h3>
+                <h3 className="text-2xl font-bold text-dame-dark mb-6">
+                  Get Started Today
+                </h3>
                 <ContactForm />
               </div>
-              
+
               <div className="lg:pl-8">
-                <h3 className="text-2xl font-bold text-dame-dark mb-6">Contact Information</h3>
+                <h3 className="text-2xl font-bold text-dame-dark mb-6">
+                  Contact Information
+                </h3>
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-dame-blue rounded-lg flex items-center justify-center">
@@ -56,7 +79,7 @@ export default function CTASection() {
                       <p className="text-gray-600">support@damechess.com</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-dame-red rounded-lg flex items-center justify-center">
                       <Phone className="text-white w-6 h-6" />
@@ -66,20 +89,24 @@ export default function CTASection() {
                       <p className="text-gray-600">+91 98765 43210</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-dame-gold rounded-lg flex items-center justify-center">
                       <MapPin className="text-white w-6 h-6" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-dame-dark">Location</h4>
-                      <p className="text-gray-600">Pune, Maharashtra, India</p>
+                      <p className="text-gray-600">
+                        Pune, Maharashtra, India
+                      </p>
                     </div>
                   </div>
                 </div>
 
                 <div className="mt-8 p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl">
-                  <h4 className="font-semibold text-dame-dark mb-3">Why Choose DameChess?</h4>
+                  <h4 className="font-semibold text-dame-dark mb-3">
+                    Why Choose DameChess?
+                  </h4>
                   <ul className="space-y-2 text-sm text-gray-700">
                     <li>✓ AI-powered personalized learning</li>
                     <li>✓ 100,000+ puzzles and 800+ videos</li>

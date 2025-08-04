@@ -228,3 +228,30 @@
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(224, 76%, 40%);
 }
+
+@keyframes float3d {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+}
+.animate-float3d {
+  animation: float3d 6s ease-in-out infinite;
+}
+
+@keyframes chessFloat {
+  0%, 100% { transform: translateY(0) rotate(-1deg); }
+  50% { transform: translateY(15px) rotate(2deg); }
+}
+.animate-chess-float {
+  animation: chessFloat 5s ease-in-out infinite;
+}
+
+@keyframes blob {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.05); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+}
+.animate-blob {
+  animation: blob 10s infinite;
+}
+.animation-delay-2000 { animation-delay: 2s; }
+.animation-delay-4000 { animation-delay: 4s; }
