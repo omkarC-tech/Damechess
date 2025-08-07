@@ -12,7 +12,7 @@ export default function TestimonialsSection() {
 
   useEffect(() => {
     const animateStats = () => {
-      const targets = { satisfaction: 95, improvement: 87, winners: 200, schools: 50 };
+      const targets = { satisfaction: 10, improvement: 91, winners: 200, schools: 4 };
       const increments = { 
         satisfaction: targets.satisfaction / 100, 
         improvement: targets.improvement / 100,
@@ -71,7 +71,7 @@ export default function TestimonialsSection() {
       role: "Parent of Kavya, Age 12",
       content: "The video lessons are amazing quality and my daughter's math grades improved by 25% since she started chess. The teachers are very patient and skilled.",
       avatar: "👨‍💻",
-      rating: 5
+      rating: 4.5
     },
     {
       name: "Anita Verma",

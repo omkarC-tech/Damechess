@@ -1,4 +1,5 @@
 import { Crown, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   const scrollToSection = (sectionId: string) => {
@@ -12,6 +13,7 @@ export default function Footer() {
     <footer className="bg-dame-dark text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
+
           {/* Brand */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
@@ -47,46 +49,33 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Programs */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Programs</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">Beginner Chess</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Intermediate Level</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Advanced Training</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">School Programs</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Tournament Prep</a></li>
-            </ul>
-          </div>
-
-          {/* Support */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Support</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">Help Center</a></li>
-              <li>
-                <button 
-                  onClick={() => scrollToSection('cta')}
-                  className="hover:text-white transition-colors text-left"
-                >
-                  Contact Us
-                </button>
-              </li>
-              <li><a href="#" className="hover:text-white transition-colors">Technical Support</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Parent Resources</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Teacher Training</a></li>
-            </ul>
-          </div>
-
           {/* Company */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
+              <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
+              <li><Link to="/blog" className="hover:text-white transition-colors">Blog</Link></li>
+              <li><Link to="/courses" className="hover:text-white transition-colors">Courses</Link></li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Legal</h3>
+            <ul className="space-y-2 text-gray-400">
+              <li><Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>
+              <li><Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/refund" className="hover:text-white transition-colors">Refund Policy</Link></li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+            <ul className="space-y-2 text-gray-400">
+              <li>📍 Pune, Maharashtra, India</li>
+              <li>📞 <a href="tel:+91 98216 79475" className="hover:text-white">+91 98216 79475</a></li>
+              <li>✉️ <a href="mailto:contact@technewity.com" className="hover:text-white">contact@technewity.com</a></li>
             </ul>
           </div>
         </div>

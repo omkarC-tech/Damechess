@@ -7,7 +7,7 @@ export default function CTASection() {
     <section id="cta" className="py-20 relative overflow-hidden min-h-screen">
       {/* 🎯 Background Chess Image */}
       <div
-        className="absolute inset-0 z-0 bg-cover bg-center opacity-30"
+        className="absolute inset-0 z-0 bg-cover bg-center opacity-40"
         style={{
           backgroundImage:
             "url('https://res.cloudinary.com/dk5dqdowr/image/upload/v1754316754/chess_wmldfm.jpg')",
@@ -76,7 +76,7 @@ export default function CTASection() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-dame-dark">Email</h4>
-                      <p className="text-gray-600">support@damechess.com</p>
+                      <p className="text-gray-600">contact@technewity.com</p>
                     </div>
                   </div>
 
@@ -86,7 +86,7 @@ export default function CTASection() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-dame-dark">Phone</h4>
-                      <p className="text-gray-600">+91 98765 43210</p>
+                      <p className="text-gray-600">+91 98216 79475</p>
                     </div>
                   </div>
 

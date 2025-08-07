@@ -38,7 +38,10 @@ export const insertUserSchema = createInsertSchema(users).pick({
 export const insertContactSchema = createInsertSchema(contacts).omit({
   id: true,
   createdAt: true,
+}).extend({
+  phone: z.string().min(10, "Phone number must be at least 10 digits"),
 });
+
 
 export const insertEnrollmentSchema = createInsertSchema(enrollments).omit({
   id: true,

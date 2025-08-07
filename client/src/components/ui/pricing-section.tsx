@@ -110,10 +110,10 @@ export default function PricingSection() {
                 <li>✓ 2 Compensation classes & 1 tournament prep session</li>
               </ul>
               <div className="flex gap-3">
-                <Button className="w-full bg-purple-400 hover:bg-purple-500 text-white">
+                <Button className="w-full bg-purple-500 hover:bg-pink-500 text-white">
                   Book Demo
                 </Button>
-                <Button className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white">
+                <Button className="w-full bg-purple-500 hover:bg-pink-500 text-white">
                   Enroll
                 </Button>
               </div>

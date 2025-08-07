@@ -8,9 +8,13 @@ export default function BenefitsSection() {
           <div className="mb-6">
             <span className="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-6 py-2 rounded-full text-lg font-semibold">Fun & Engaging</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent mb-4">
-            Why Kids Love Chess
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
+            Why Kids Love{" "}
+            <span className="animate-gradient-text bg-gradient-to-r from-purple-500 via-pink-400 to-orange-400 bg-clip-text text-transparent font-extrabold">
+              DameChess
+            </span>
           </h2>
+
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Chess isn't just a game—it's a powerful tool that develops critical life skills while having amazing fun and achieving exciting milestones.
           </p>
@@ -58,13 +62,16 @@ export default function BenefitsSection() {
             <p className="text-gray-600">Chess encourages creative thinking and helps kids find innovative solutions to complex problems.</p>
           </div>
 
-          <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2">
-            <div className="w-16 h-16 bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-xl flex items-center justify-center mb-6">
+          <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2 hover:scale-105 cursor-pointer group">
+            <div className="w-16 h-16 bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
               <Users className="text-white w-8 h-8" />
             </div>
             <h3 className="text-xl font-bold text-dame-dark mb-3">Social Skills</h3>
-            <p className="text-gray-600">Online tournaments and group learning help kids build confidence and sportsmanship.</p>
+            <p className="text-gray-600">
+              Online tournaments and group learning help kids build confidence and sportsmanship.
+            </p>
           </div>
+
         </div>
 
         {/* Academic Performance Highlight */}

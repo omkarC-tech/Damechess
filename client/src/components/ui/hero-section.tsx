@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "wouter"; // ✅ for detecting URL route
 import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
 
@@ -11,9 +12,23 @@ export default function HeroSection() {
 
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
+  const [location] = useLocation(); // ✅ to detect query params
+
+  // ✅ Scroll to home if ?scroll=home is in URL
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("scroll") === "home") {
+      setTimeout(() => {
+        document.getElementById("home")?.scrollIntoView({ behavior: "smooth" });
+        window.history.replaceState({}, "", "/"); // ✅ optional: clean the URL
+      }, 200); // slight delay to ensure DOM is ready
+    }
+  }, [location]);
+
+  // Animate counters on scroll
   useEffect(() => {
     const animateCounters = () => {
-      const targets = { puzzles: 100000, videos: 800, students: 10000 };
+      const targets = { puzzles: 10000, videos: 80, students: 1000 };
       const increments = {
         puzzles: targets.puzzles / 100,
         videos: targets.videos / 100,
@@ -73,39 +88,20 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="min-h-screen pt-16 pb-16 relative overflow-hidden">
-      {/* 🌄 Background Chess Image */}
+    <section id="home" className="min-h-screen pt-16 pb-16 relative overflow-hidden">
+      {/* Background */}
       <div
-  className="absolute inset-0 bg-cover bg-center opacity-45 z-[-10]" // was 70 earlier
-  style={{
-    backgroundImage:
-      "url('https://res.cloudinary.com/dk5dqdowr/image/upload/v1754319590/randy-fath-G1yhU1Ej-9A-unsplash_phsugf.jpg')",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    filter: "brightness(0.5) saturate(1)", // was 0.6 before
-  }}
-></div>
-
-
-      {/* 🫧 Optional Animated Gradient Blobs (fade them down or disable) */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <div className="absolute w-[600px] h-[600px] bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob top-10 left-[-200px]"></div>
-        <div className="absolute w-[500px] h-[500px] bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000 top-[30%] right-[-150px]"></div>
-        <div className="absolute w-[400px] h-[400px] bg-yellow-200 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-4000 bottom-0 left-[30%]"></div>
-      </div>
-
-      {/* 🚫 Floating Chess Pieces (Commented Out)
-      <div
-        className="absolute inset-0 z-10 pointer-events-none transition-transform duration-300"
+        className="absolute inset-0 bg-cover bg-center opacity-45 z-[-10]"
         style={{
-          transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
+          backgroundImage:
+            "url('https://res.cloudinary.com/dk5dqdowr/image/upload/v1754319590/randy-fath-G1yhU1Ej-9A-unsplash_phsugf.jpg')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          filter: "brightness(0.5) saturate(2)",
         }}
-      >
-        ...
-      </div>
-      */}
+      ></div>
 
-      {/* ✨ Light Particles */}
+      {/* Light Particles */}
       <div className="absolute inset-0 z-10">
         {Array.from({ length: 10 }, (_, i) => (
           <div
@@ -121,7 +117,7 @@ export default function HeroSection() {
         ))}
       </div>
 
-      {/* 💬 Main Content */}
+      {/* Main Content */}
       <div className="container mx-auto px-4 relative z-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
           <div className="text-black animate-slide-up">
@@ -133,7 +129,7 @@ export default function HeroSection() {
 
             <h1 className="text-6xl md:text-7xl font-bold leading-tight mb-6">
               Master{" "}
-              <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
+              <span className="animated-gradient-text bg-clip-text text-transparent">
                 Chess
               </span>
               <br />
@@ -141,7 +137,7 @@ export default function HeroSection() {
             </h1>
 
             <p className="text-xl mb-8 text-gray-800 max-w-lg leading-relaxed">
-              Join 10,000+ kids and teens who've discovered the joy of chess
+              Join 1000+ kids and teens who've discovered the joy of chess
               through our revolutionary smart curriculum that grows with your
               child.
             </p>
@@ -165,7 +161,7 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* 📊 Stats */}
+          {/* Stats */}
           <div
             id="hero-stats"
             className="flex flex-col sm:flex-row gap-8 justify-around items-center mt-8"
