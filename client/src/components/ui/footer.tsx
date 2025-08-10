@@ -33,7 +33,7 @@ export default function Footer() {
             <p className="text-gray-400 mb-4">
               Empowering young minds through AI-powered chess education.
             </p>
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-dame-gold transition-colors">
                 <Facebook className="w-6 h-6" />
               </a>
@@ -46,7 +46,7 @@ export default function Footer() {
               <a href="#" className="text-gray-400 hover:text-dame-gold transition-colors">
                 <Youtube className="w-6 h-6" />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Company */}
@@ -56,6 +56,7 @@ export default function Footer() {
               <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
               <li><Link to="/blog" className="hover:text-white transition-colors">Blog</Link></li>
               <li><Link to="/courses" className="hover:text-white transition-colors">Courses</Link></li>
+              <li><Link to="/careers" className="hover:text-white transition-colors">Careers</Link></li> {/* ✅ Added */}
             </ul>
           </div>
 

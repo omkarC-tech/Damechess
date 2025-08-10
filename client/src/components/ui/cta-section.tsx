@@ -43,14 +43,14 @@ export default function CTASection() {
             >
               Start Free Trial - No Credit Card Required
             </Button>
-            <Button
+            {/* <Button
               size="lg"
               variant="outline"
               className="border-2 border-white text-black px-8 py-4 text-lg font-bold hover:bg-white hover:text-purple-600 transition-all"
             >
               <Play className="mr-2 h-5 w-5" />
               Schedule Demo
-            </Button>
+            </Button> */}
           </div>
         </div>
 
@@ -109,7 +109,7 @@ export default function CTASection() {
                   </h4>
                   <ul className="space-y-2 text-sm text-gray-700">
                     <li>✓ AI-powered personalized learning</li>
-                    <li>✓ 100,000+ puzzles and 800+ videos</li>
+                    <li>✓ 10,000+ puzzles and 80+ videos</li>
                     <li>✓ Proven academic improvement</li>
                     <li>✓ Expert teacher training included</li>
                     <li>✓ 24/7 support and guidance</li>

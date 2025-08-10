@@ -97,7 +97,7 @@ export default function HeroSection() {
             "url('https://res.cloudinary.com/dk5dqdowr/image/upload/v1754319590/randy-fath-G1yhU1Ej-9A-unsplash_phsugf.jpg')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-          filter: "brightness(0.5) saturate(2)",
+          filter: "brightness(0.5) saturate(2.15)",
         }}
       ></div>
 
@@ -122,7 +122,7 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
           <div className="text-black animate-slide-up">
             <div className="flex items-center gap-3 mb-6 mt-12">
-              <span className="text-amber-600 font-semibold text-lg">
+              <span className="text-amber-700 font-semibold text-lg">
                 Transform Your Child's Mind
               </span>
             </div>
@@ -150,14 +150,14 @@ export default function HeroSection() {
               >
                 Start Free Journey
               </Button>
-              <Button
+              {/* <Button
                 variant="outline"
                 className="border-2 border-black/20 text-black px-10 py-6 text-xl font-bold hover:bg-black/10 hover:border-black transition-all rounded-2xl"
                 size="lg"
               >
                 <Play className="mr-3 h-6 w-6" />
                 Watch Demo
-              </Button>
+              </Button> */}
             </div>
           </div>
 

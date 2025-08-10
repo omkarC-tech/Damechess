@@ -6,15 +6,8 @@ import {
   CardTitle
 } from "@/components/ui/card";
 import {
-  Check,
   User,
   Crown,
-  Smartphone,
-  Trophy,
-  Award,
-  Headphones,
-  Star,
-  Zap,
   Shield
 } from "lucide-react";
 
@@ -29,6 +22,7 @@ export default function PricingSection() {
       className="py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50"
     >
       <div className="container mx-auto px-4">
+        {/* Section Header */}
         <div className="text-center mb-16 animate-slide-up">
           <div className="mb-4">
             <span className="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-6 py-2 rounded-full text-lg font-semibold">
@@ -44,7 +38,9 @@ export default function PricingSection() {
           </p>
         </div>
 
+        {/* Pricing Cards */}
         <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+          
           {/* Monthly Plan */}
           <Card className="relative hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-pink-200 bg-white/90">
             <CardHeader className="text-center pb-6 bg-gradient-to-br from-orange-400 to-pink-500 text-white rounded-t-lg">
@@ -56,15 +52,9 @@ export default function PricingSection() {
             </CardHeader>
             <CardContent className="p-6">
               <div className="text-center mb-6">
-                <div className="text-4xl font-bold text-orange-600 mb-1">
-                  ₹2500.00
-                </div>
-                <div className="text-sm line-through text-gray-400 mb-1">
-                  ₹3000.00
-                </div>
-                <div className="text-green-600 text-sm font-semibold">
-                  You Save ₹500.00
-                </div>
+                <div className="text-4xl font-bold text-orange-600 mb-1">₹2500.00</div>
+                <div className="text-sm line-through text-gray-400 mb-1">₹3000.00</div>
+                <div className="text-green-600 text-sm font-semibold">You Save ₹500.00</div>
               </div>
               <ul className="space-y-3 mb-6 text-sm text-gray-700">
                 <li>✓ Weekly 1.5 hrs interactive sessions</li>
@@ -72,10 +62,10 @@ export default function PricingSection() {
                 <li>✓ Access to class recordings & resources</li>
               </ul>
               <div className="flex gap-3">
-                <Button className="w-full bg-orange-400 hover:bg-orange-500 text-white">
+                <Button onClick={scrollToCTA} className="w-full bg-orange-400 hover:bg-orange-500 text-white">
                   Book Demo
                 </Button>
-                <Button className="w-full bg-gradient-to-r from-pink-400 to-orange-500 text-white">
+                <Button onClick={scrollToCTA} className="w-full bg-gradient-to-r from-pink-400 to-orange-500 text-white">
                   Enroll
                 </Button>
               </div>
@@ -93,15 +83,9 @@ export default function PricingSection() {
             </CardHeader>
             <CardContent className="p-6">
               <div className="text-center mb-6">
-                <div className="text-4xl font-bold text-purple-600 mb-1">
-                  ₹6000.00
-                </div>
-                <div className="text-sm line-through text-gray-400 mb-1">
-                  ₹9000.00
-                </div>
-                <div className="text-green-600 text-sm font-semibold">
-                  You Save ₹3000.00
-                </div>
+                <div className="text-4xl font-bold text-purple-600 mb-1">₹6000.00</div>
+                <div className="text-sm line-through text-gray-400 mb-1">₹9000.00</div>
+                <div className="text-green-600 text-sm font-semibold">You Save ₹3000.00</div>
               </div>
               <ul className="space-y-3 mb-6 text-sm text-gray-700">
                 <li>✓ Weekly 1.5 hrs interactive sessions</li>
@@ -110,10 +94,10 @@ export default function PricingSection() {
                 <li>✓ 2 Compensation classes & 1 tournament prep session</li>
               </ul>
               <div className="flex gap-3">
-                <Button className="w-full bg-purple-500 hover:bg-pink-500 text-white">
+                <Button onClick={scrollToCTA} className="w-full bg-purple-500 hover:bg-pink-500 text-white">
                   Book Demo
                 </Button>
-                <Button className="w-full bg-purple-500 hover:bg-pink-500 text-white">
+                <Button onClick={scrollToCTA} className="w-full bg-purple-500 hover:bg-pink-500 text-white">
                   Enroll
                 </Button>
               </div>
@@ -136,15 +120,9 @@ export default function PricingSection() {
             </CardHeader>
             <CardContent className="p-6">
               <div className="text-center mb-6">
-                <div className="text-4xl font-bold text-yellow-600 mb-1">
-                  ₹11000.00
-                </div>
-                <div className="text-sm line-through text-gray-400 mb-1">
-                  ₹18000.00
-                </div>
-                <div className="text-green-600 text-sm font-semibold">
-                  You Save ₹7000.00
-                </div>
+                <div className="text-4xl font-bold text-yellow-600 mb-1">₹11000.00</div>
+                <div className="text-sm line-through text-gray-400 mb-1">₹18000.00</div>
+                <div className="text-green-600 text-sm font-semibold">You Save ₹7000.00</div>
               </div>
               <ul className="space-y-3 mb-6 text-sm text-gray-700">
                 <li>✓ Weekly 1.5 hrs interactive sessions</li>
@@ -153,15 +131,16 @@ export default function PricingSection() {
                 <li>✓ 5 Compensation classes & 2 tournament prep sessions</li>
               </ul>
               <div className="flex gap-3">
-                <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-white">
+                <Button onClick={scrollToCTA} className="w-full bg-yellow-500 hover:bg-yellow-600 text-white">
                   Book Demo
                 </Button>
-                <Button className="w-full bg-gradient-to-r from-yellow-400 to-red-500 text-white">
+                <Button onClick={scrollToCTA} className="w-full bg-gradient-to-r from-yellow-400 to-red-500 text-white">
                   Enroll
                 </Button>
               </div>
             </CardContent>
           </Card>
+
         </div>
       </div>
     </section>
