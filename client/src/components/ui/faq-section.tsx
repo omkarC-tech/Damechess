@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { Plus, Minus } from "lucide-react";
 
 interface FAQItem {
   question: string;
@@ -26,10 +26,6 @@ const faqData: FAQItem[] = [
   {
     question: "Can I cancel my subscription anytime?",
     answer: "Yes, you can cancel your subscription at any time. There are no long-term commitments, and you'll retain access until the end of your current billing period."
-  },
-  {
-    question: "What devices can we use to access the lessons?",
-    answer: "Our platform works on all devices - computers, tablets, and smartphones. The lessons are optimized for both desktop and mobile experiences."
   }
 ];
 
@@ -41,59 +37,51 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-purple-50">
+    <section className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <div className="mb-6">
-            <span className="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-6 py-2 rounded-full text-lg font-semibold">
-              Questions & Answers
-            </span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-dame-dark mb-4">
             Frequently Asked Questions
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Got questions? We've got answers! Here are the most common questions parents ask about Dame Chess Academy.
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="space-y-4">
-            {faqData.map((faq, index) => (
-              <div 
-                key={index}
-                className="bg-white rounded-2xl shadow-lg border border-purple-100 overflow-hidden hover:shadow-xl transition-all duration-300"
+        <div className="max-w-3xl mx-auto space-y-4">
+          {faqData.map((faq, index) => (
+            <div
+              key={index}
+              className="border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 hover:border-dame-orange/50"
+            >
+              <button
+                onClick={() => toggleFAQ(index)}
+                className="w-full p-6 text-left flex justify-between items-center bg-white hover:bg-gray-50 transition-colors"
               >
-                <button
-                  onClick={() => toggleFAQ(index)}
-                  className="w-full p-6 text-left flex justify-between items-center hover:bg-purple-50 transition-all duration-300"
-                >
-                  <h3 className="text-lg font-semibold text-gray-800 pr-4">
-                    {faq.question}
-                  </h3>
-                  <div className="flex-shrink-0">
-                    {openIndex === index ? (
-                      <ChevronUp className="w-6 h-6 text-purple-600 transform transition-transform duration-300" />
-                    ) : (
-                      <ChevronDown className="w-6 h-6 text-purple-600 transform transition-transform duration-300" />
-                    )}
-                  </div>
-                </button>
-                
-                <div
-                  className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                    openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                <h3 className="text-lg font-bold text-dame-dark pr-8">
+                  {faq.question}
+                </h3>
+                <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors ${openIndex === index ? 'bg-dame-orange text-white' : 'bg-gray-100 text-gray-500'}`}>
+                  {openIndex === index ? (
+                    <Minus className="w-5 h-5" />
+                  ) : (
+                    <Plus className="w-5 h-5" />
+                  )}
+                </div>
+              </button>
+
+              <div
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
                   }`}
-                >
-                  <div className="p-6 pt-0 border-t border-purple-100">
-                    <p className="text-gray-600 leading-relaxed">
-                      {faq.answer}
-                    </p>
-                  </div>
+              >
+                <div className="p-6 pt-0 bg-white">
+                  <p className="text-gray-600 leading-relaxed">
+                    {faq.answer}
+                  </p>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

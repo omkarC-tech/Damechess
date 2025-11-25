@@ -1,4 +1,4 @@
-import { type User, type InsertUser, type Contact, type InsertContact, type Enrollment, type InsertEnrollment } from "@shared/schema";
+import { type User, type InsertUser, type Contact, type InsertContact, type Enrollment, type InsertEnrollment, type Subscriber, type InsertSubscriber } from "@shared/schema";
 import { randomUUID } from "crypto";
 
 export interface IStorage {
@@ -9,17 +9,20 @@ export interface IStorage {
   getContacts(): Promise<Contact[]>;
   createEnrollment(enrollment: InsertEnrollment): Promise<Enrollment>;
   getEnrollments(): Promise<Enrollment[]>;
+  createSubscriber(subscriber: InsertSubscriber): Promise<Subscriber>;
 }
 
 export class MemStorage implements IStorage {
   private users: Map<string, User>;
   private contacts: Map<string, Contact>;
   private enrollments: Map<string, Enrollment>;
+  private subscribers: Map<string, Subscriber>;
 
   constructor() {
     this.users = new Map();
     this.contacts = new Map();
     this.enrollments = new Map();
+    this.subscribers = new Map();
   }
 
   async getUser(id: string): Promise<User | undefined> {
@@ -71,6 +74,17 @@ export class MemStorage implements IStorage {
     return Array.from(this.enrollments.values()).sort(
       (a, b) => (b.createdAt?.getTime() || 0) - (a.createdAt?.getTime() || 0)
     );
+  }
+
+  async createSubscriber(insertSubscriber: InsertSubscriber): Promise<Subscriber> {
+    const id = randomUUID();
+    const subscriber: Subscriber = {
+      ...insertSubscriber,
+      id,
+      createdAt: new Date(),
+    };
+    this.subscribers.set(id, subscriber);
+    return subscriber;
   }
 }
 

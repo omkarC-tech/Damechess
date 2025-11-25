@@ -11,11 +11,13 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
-        'dame-dark': '#1c0f0a',
-        'dame-blue': '#4f46e5',
-        'dame-light': '#6366f1',
+        'dame-orange': '#f97316',
+        'dame-blue': '#3b82f6',
+        'dame-purple': '#8b5cf6',
+        'dame-green': '#10b981',
         'dame-red': '#ef4444',
-        'dame-gold': '#f59e0b',
+        'dame-dark': '#1f2937',
+        'dame-light': '#f9fafb',
 
         background: "var(--background)",
         foreground: "var(--foreground)",

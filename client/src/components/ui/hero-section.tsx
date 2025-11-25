@@ -1,188 +1,142 @@
-import { useState, useEffect } from "react";
-import { useLocation } from "wouter"; // ✅ for detecting URL route
+import { useEffect, useState, useMemo } from "react";
+import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Play } from "lucide-react";
+import { Star, Users, Trophy, Gamepad2 } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function HeroSection() {
-  const [counters, setCounters] = useState({
-    puzzles: 0,
-    videos: 0,
-    students: 0,
-  });
-
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-  const [location] = useLocation(); // ✅ to detect query params
-
-  // ✅ Scroll to home if ?scroll=home is in URL
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    if (params.get("scroll") === "home") {
-      setTimeout(() => {
-        document.getElementById("home")?.scrollIntoView({ behavior: "smooth" });
-        window.history.replaceState({}, "", "/"); // ✅ optional: clean the URL
-      }, 200); // slight delay to ensure DOM is ready
-    }
-  }, [location]);
-
-  // Animate counters on scroll
-  useEffect(() => {
-    const animateCounters = () => {
-      const targets = { puzzles: 10000, videos: 80, students: 1000 };
-      const increments = {
-        puzzles: targets.puzzles / 100,
-        videos: targets.videos / 100,
-        students: targets.students / 100,
-      };
-
-      let current = { puzzles: 0, videos: 0, students: 0 };
-
-      const interval = setInterval(() => {
-        let allComplete = true;
-
-        Object.keys(targets).forEach((key) => {
-          const targetKey = key as keyof typeof targets;
-          if (current[targetKey] < targets[targetKey]) {
-            current[targetKey] += increments[targetKey];
-            allComplete = false;
-          } else {
-            current[targetKey] = targets[targetKey];
-          }
-        });
-
-        setCounters({ ...current });
-
-        if (allComplete) {
-          clearInterval(interval);
-        }
-      }, 20);
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting) {
-        animateCounters();
-        observer.disconnect();
-      }
-    });
-
-    const heroElement = document.getElementById("hero-stats");
-    if (heroElement) {
-      observer.observe(heroElement);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      const x = (e.clientX / window.innerWidth - 0.5) * 20;
-      const y = (e.clientY / window.innerHeight - 0.5) * 20;
-      setMousePosition({ x, y });
-    };
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
+  const [, setLocation] = useLocation();
 
   const scrollToCTA = () => {
-    document.getElementById("cta")?.scrollIntoView({ behavior: "smooth" });
+    setLocation("/contact");
   };
 
+  const [titleNumber, setTitleNumber] = useState(0);
+  const titles = useMemo(
+    () => ["Like a Pro", "With Confidence", "The Smart Way"],
+    []
+  );
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      if (titleNumber === titles.length - 1) {
+        setTitleNumber(0);
+      } else {
+        setTitleNumber(titleNumber + 1);
+      }
+    }, 2000);
+    return () => clearTimeout(timeoutId);
+  }, [titleNumber, titles]);
+
   return (
-    <section id="home" className="min-h-screen pt-16 pb-16 relative overflow-hidden">
-      {/* Background */}
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-45 z-[-10]"
-        style={{
-          backgroundImage:
-            "url('https://res.cloudinary.com/dk5dqdowr/image/upload/v1754319590/randy-fath-G1yhU1Ej-9A-unsplash_phsugf.jpg')",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          filter: "brightness(0.5) saturate(2.15)",
-        }}
-      ></div>
-
-      {/* Light Particles */}
-      <div className="absolute inset-0 z-10">
-        {Array.from({ length: 10 }, (_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-white/40 rounded-full animate-float3d"
-            style={{
-              top: `${20 + Math.random() * 60}%`,
-              left: `${10 + Math.random() * 80}%`,
-              animationDelay: `${i * 2}s`,
-              animationDuration: `6s`,
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Main Content */}
-      <div className="container mx-auto px-4 relative z-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
-          <div className="text-black animate-slide-up">
-            <div className="flex items-center gap-3 mb-6 mt-12">
-              <span className="text-amber-700 font-semibold text-lg">
+    <section id="home" className="pt-32 pb-16 md:pt-40 md:pb-24 bg-white overflow-hidden">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <div className="text-left space-y-8 animate-slide-up">
+            <div className="inline-block">
+              <span className="text-sm font-bold tracking-wider text-gray-900 uppercase">
                 Transform Your Child's Mind
               </span>
             </div>
 
-            <h1 className="text-6xl md:text-7xl font-bold leading-tight mb-6">
-              Master{" "}
-              <span className="animated-gradient-text bg-clip-text text-transparent">
-                Chess
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-dame-dark leading-[1.1]">
+              Master Chess <br />
+              <span className="relative flex w-full overflow-hidden md:pb-4 md:pt-1 h-[1.2em]">
+                &nbsp;
+                {titles.map((title, index) => (
+                  <motion.span
+                    key={index}
+                    className="absolute font-extrabold text-dame-orange left-0"
+                    initial={{ opacity: 0, y: "100%" }}
+                    transition={{ type: "spring", stiffness: 50 }}
+                    animate={
+                      titleNumber === index
+                        ? {
+                          y: 0,
+                          opacity: 1,
+                        }
+                        : {
+                          y: titleNumber > index ? "-100%" : "100%",
+                          opacity: 0,
+                        }
+                    }
+                  >
+                    {title}
+                  </motion.span>
+                ))}
               </span>
-              <br />
-              Like Never Before
             </h1>
 
-            <p className="text-xl mb-8 text-gray-800 max-w-lg leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-900 font-bold max-w-lg leading-relaxed">
               Join 1000+ kids and teens who've discovered the joy of chess
               through our revolutionary smart curriculum that grows with your
               child.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            <div className="flex flex-wrap gap-4">
               <Button
                 onClick={scrollToCTA}
-                className="bg-gradient-to-r from-amber-600 to-yellow-500 text-white px-10 py-6 text-xl font-bold hover:from-amber-700 hover:to-yellow-600 transition-all transform hover:scale-105 shadow-lg rounded-2xl"
-                size="lg"
+                className="bg-dame-orange hover:bg-orange-600 text-white px-8 py-6 text-lg font-bold rounded-xl shadow-lg shadow-orange-200 transition-all transform hover:scale-105"
               >
-                Start Free Journey
+                Start Free Trial
               </Button>
-              {/* <Button
-                variant="outline"
-                className="border-2 border-black/20 text-black px-10 py-6 text-xl font-bold hover:bg-black/10 hover:border-black transition-all rounded-2xl"
-                size="lg"
-              >
-                <Play className="mr-3 h-6 w-6" />
-                Watch Demo
-              </Button> */}
+            </div>
+
+            {/* Stats Row */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-gray-100">
+              <div className="flex flex-col items-center text-center gap-2">
+                <div className="p-3 bg-orange-100 rounded-xl text-dame-orange">
+                  <Star className="w-6 h-6 fill-current" />
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-dame-dark">4.8/5</div>
+                  <div className="text-sm text-gray-900 font-bold">Ratings</div>
+                </div>
+              </div>
+
+              <div className="flex flex-col items-center text-center gap-2">
+                <div className="p-3 bg-blue-100 rounded-xl text-dame-blue">
+                  <Users className="w-6 h-6 fill-current" />
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-dame-dark">2k+</div>
+                  <div className="text-sm text-gray-500 font-medium">Students</div>
+                </div>
+              </div>
+
+              <div className="flex flex-col items-center text-center gap-2">
+                <div className="p-3 bg-red-100 rounded-xl text-dame-red">
+                  <Trophy className="w-6 h-6 fill-current" />
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-dame-dark">72</div>
+                  <div className="text-sm text-gray-500 font-medium">Titled Players</div>
+                </div>
+              </div>
+
+              <div className="flex flex-col items-center text-center gap-2">
+                <div className="p-3 bg-green-100 rounded-xl text-dame-green">
+                  <Gamepad2 className="w-6 h-6 fill-current" />
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-dame-dark">500+</div>
+                  <div className="text-sm text-gray-500 font-medium">Daily Games</div>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Stats */}
-          <div
-            id="hero-stats"
-            className="flex flex-col sm:flex-row gap-8 justify-around items-center mt-8"
-          >
-            <div className="text-center transform hover:scale-110 transition-all">
-              <div className="text-4xl font-bold text-yellow-700 drop-shadow-md">
-                {Math.floor(counters.puzzles).toLocaleString()}+
-              </div>
-              <div className="text-gray-800 font-medium">Chess Puzzles</div>
-            </div>
-            <div className="text-center transform hover:scale-110 transition-all">
-              <div className="text-4xl font-bold text-lime-700 drop-shadow-md">
-                {Math.floor(counters.videos)}+
-              </div>
-              <div className="text-gray-800 font-medium">Video Lessons</div>
-            </div>
-            <div className="text-center transform hover:scale-110 transition-all">
-              <div className="text-4xl font-bold text-rose-600 drop-shadow-md">
-                {Math.floor(counters.students).toLocaleString()}+
-              </div>
-              <div className="text-gray-800 font-medium">Happy Students</div>
+          {/* Right Image */}
+          <div className="relative lg:h-[600px] flex items-center justify-center animate-float3d">
+            {/* Placeholder for the cartoon illustration */}
+            {/* Placeholder for the cartoon illustration */}
+            <div className="relative w-full max-w-2xl aspect-square flex items-center justify-center">
+              <img
+                src="/hero-characters.png"
+                alt="Kids playing chess"
+                className="relative z-10 w-[120%] h-[120%] object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+              />
             </div>
           </div>
         </div>

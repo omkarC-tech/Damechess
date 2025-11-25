@@ -1,60 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   --background: hsl(0, 0%, 100%);
-  --foreground: hsl(240, 10%, 3.9%);
-  --muted: hsl(240, 4.8%, 95.9%);
-  --muted-foreground: hsl(240, 3.7%, 64.9%);
-  --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(240, 10%, 3.9%);
+  --foreground: hsl(222.2, 84%, 4.9%);
   --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(240, 10%, 3.9%);
-  --border: hsl(240, 5.9%, 90%);
-  --input: hsl(240, 5.9%, 90%);
-  --primary: hsl(221, 83%, 53%);
+  --card-foreground: hsl(222.2, 84%, 4.9%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(222.2, 84%, 4.9%);
+  --primary: hsl(24.6, 95%, 53.1%);
+  /* Orange */
   --primary-foreground: hsl(210, 40%, 98%);
-  --secondary: hsl(210, 40%, 96%);
-  --secondary-foreground: hsl(222, 84%, 4.9%);
-  --accent: hsl(210, 40%, 96%);
-  --accent-foreground: hsl(222, 84%, 4.9%);
-  --destructive: hsl(0, 84%, 60%);
+  --secondary: hsl(210, 40%, 96.1%);
+  --secondary-foreground: hsl(222.2, 47.4%, 11.2%);
+  --muted: hsl(210, 40%, 96.1%);
+  --muted-foreground: hsl(215.4, 16.3%, 46.9%);
+  --accent: hsl(210, 40%, 96.1%);
+  --accent-foreground: hsl(222.2, 47.4%, 11.2%);
+  --destructive: hsl(0, 84.2%, 60.2%);
   --destructive-foreground: hsl(210, 40%, 98%);
-  --ring: hsl(221, 83%, 53%);
-  --radius: 0.5rem;
-  
-  /* Professional Color Palette inspired by Eight Times Eight */
-  --dame-blue: hsl(224, 76%, 48%);
-  --dame-red: hsl(0, 74%, 42%);
-  --dame-gold: hsl(43, 96%, 56%);
-  --dame-dark: hsl(220, 26%, 14%);
-  --dame-purple: hsl(262, 83%, 58%);
-  --dame-orange: hsl(25, 95%, 53%);
-  --dame-green: hsl(142, 76%, 36%);
-  --dame-teal: hsl(173, 58%, 39%);
+  --border: hsl(214.3, 31.8%, 91.4%);
+  --input: hsl(214.3, 31.8%, 91.4%);
+  --ring: hsl(24.6, 95%, 53.1%);
+  --radius: 0.75rem;
+
+  /* DameChess Palette */
+  --dame-orange: hsl(24.6, 95%, 53.1%);
+  --dame-blue: hsl(221.2, 83.2%, 53.3%);
+  --dame-purple: hsl(262.1, 83.3%, 57.8%);
+  --dame-green: hsl(142.1, 76.2%, 36.3%);
+  --dame-red: hsl(0, 72.2%, 50.6%);
+  --dame-dark: hsl(222.2, 47.4%, 11.2%);
+  --dame-light: hsl(210, 40%, 98%);
 }
 
 .dark {
-  --background: hsl(240, 10%, 3.9%);
-  --foreground: hsl(0, 0%, 98%);
-  --muted: hsl(240, 3.7%, 15.9%);
-  --muted-foreground: hsl(240, 5%, 64.9%);
-  --popover: hsl(240, 10%, 3.9%);
-  --popover-foreground: hsl(0, 0%, 98%);
-  --card: hsl(240, 10%, 3.9%);
-  --card-foreground: hsl(0, 0%, 98%);
-  --border: hsl(240, 3.7%, 15.9%);
-  --input: hsl(240, 3.7%, 15.9%);
-  --primary: hsl(221, 83%, 53%);
-  --primary-foreground: hsl(210, 40%, 98%);
-  --secondary: hsl(240, 3.7%, 15.9%);
-  --secondary-foreground: hsl(0, 0%, 98%);
-  --accent: hsl(240, 3.7%, 15.9%);
-  --accent-foreground: hsl(0, 0%, 98%);
+  --background: hsl(222.2, 84%, 4.9%);
+  --foreground: hsl(210, 40%, 98%);
+  --card: hsl(222.2, 84%, 4.9%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --popover: hsl(222.2, 84%, 4.9%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --primary: hsl(24.6, 95%, 53.1%);
+  --primary-foreground: hsl(222.2, 47.4%, 11.2%);
+  --secondary: hsl(217.2, 32.6%, 17.5%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --muted: hsl(217.2, 32.6%, 17.5%);
+  --muted-foreground: hsl(215, 20.2%, 65.1%);
+  --accent: hsl(217.2, 32.6%, 17.5%);
+  --accent-foreground: hsl(210, 40%, 98%);
   --destructive: hsl(0, 62.8%, 30.6%);
-  --destructive-foreground: hsl(0, 0%, 98%);
-  --ring: hsl(240, 4.9%, 83.9%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --border: hsl(217.2, 32.6%, 17.5%);
+  --input: hsl(217.2, 32.6%, 17.5%);
+  --ring: hsl(24.6, 95%, 53.1%);
 }
 
 @layer base {
@@ -63,38 +65,73 @@
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply font-sans antialiased bg-background text-gray-900 font-semibold;
+    font-family: 'Quicksand', sans-serif;
   }
 }
 
 @layer utilities {
-  .dame-blue { color: hsl(224, 76%, 48%); }
-  .dame-red { color: hsl(0, 74%, 42%); }
-  .dame-gold { color: hsl(43, 96%, 56%); }
-  .dame-dark { color: hsl(220, 26%, 14%); }
-  .dame-purple { color: hsl(262, 83%, 58%); }
-  .dame-orange { color: hsl(25, 95%, 53%); }
-  .dame-green { color: hsl(142, 76%, 36%); }
-  .dame-teal { color: hsl(173, 58%, 39%); }
-  
-  .bg-dame-blue { background-color: hsl(224, 76%, 48%); }
-  .bg-dame-red { background-color: hsl(0, 74%, 42%); }
-  .bg-dame-gold { background-color: hsl(43, 96%, 56%); }
-  .bg-dame-dark { background-color: hsl(220, 26%, 14%); }
-  .bg-dame-purple { background-color: hsl(262, 83%, 58%); }
-  .bg-dame-orange { background-color: hsl(25, 95%, 53%); }
-  .bg-dame-green { background-color: hsl(142, 76%, 36%); }
-  .bg-dame-teal { background-color: hsl(173, 58%, 39%); }
+  .dame-orange {
+    color: hsl(24.6, 95%, 53.1%);
+  }
+
+  .dame-blue {
+    color: hsl(221.2, 83.2%, 53.3%);
+  }
+
+  .dame-purple {
+    color: hsl(262.1, 83.3%, 57.8%);
+  }
+
+  .dame-green {
+    color: hsl(142.1, 76.2%, 36.3%);
+  }
+
+  .dame-red {
+    color: hsl(0, 72.2%, 50.6%);
+  }
+
+  .dame-dark {
+    color: hsl(222.2, 47.4%, 11.2%);
+  }
+
+  .bg-dame-orange {
+    background-color: hsl(24.6, 95%, 53.1%);
+  }
+
+  .bg-dame-blue {
+    background-color: hsl(221.2, 83.2%, 53.3%);
+  }
+
+  .bg-dame-purple {
+    background-color: hsl(262.1, 83.3%, 57.8%);
+  }
+
+  .bg-dame-green {
+    background-color: hsl(142.1, 76.2%, 36.3%);
+  }
+
+  .bg-dame-red {
+    background-color: hsl(0, 72.2%, 50.6%);
+  }
+
+  .bg-dame-dark {
+    background-color: hsl(222.2, 47.4%, 11.2%);
+  }
 }
 
 /* Advanced 3D Animation keyframes */
 @keyframes float3d {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px) rotateX(0deg) rotateY(0deg);
   }
+
   33% {
     transform: translateY(-20px) rotateX(5deg) rotateY(15deg);
   }
+
   66% {
     transform: translateY(-10px) rotateX(-3deg) rotateY(-10deg);
   }
@@ -104,15 +141,19 @@
   0% {
     transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   }
+
   100% {
     transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
   }
 }
 
 @keyframes chess-float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px) scale(1);
   }
+
   50% {
     transform: translateY(-15px) scale(1.05);
   }
@@ -122,8 +163,19 @@
   0% {
     background-position: -200% 0;
   }
+
   100% {
     background-position: 200% 0;
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+
+  100% {
+    background-position: -100%;
   }
 }
 
@@ -132,6 +184,7 @@
     transform: translateY(100px);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -143,6 +196,7 @@
     transform: scale(0.8);
     opacity: 0;
   }
+
   100% {
     transform: scale(1);
     opacity: 1;
@@ -163,6 +217,10 @@
 
 .animate-shimmer {
   animation: shimmer 2s infinite;
+}
+
+.animate-shine {
+  animation: shine 5s linear infinite;
 }
 
 .animate-slide-up {
@@ -202,12 +260,10 @@
 }
 
 .shimmer-bg {
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.4),
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent);
   background-size: 200% 100%;
 }
 
@@ -230,39 +286,74 @@
 }
 
 @keyframes float3d {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-20px) rotate(2deg); }
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-20px) rotate(2deg);
+  }
 }
+
 .animate-float3d {
   animation: float3d 6s ease-in-out infinite;
 }
 
 @keyframes chessFloat {
-  0%, 100% { transform: translateY(0) rotate(-1deg); }
-  50% { transform: translateY(15px) rotate(2deg); }
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1deg);
+  }
+
+  50% {
+    transform: translateY(15px) rotate(2deg);
+  }
 }
+
 .animate-chess-float {
   animation: chessFloat 5s ease-in-out infinite;
 }
 
 @keyframes blob {
-  0%, 100% { transform: translate(0px, 0px) scale(1); }
-  33% { transform: translate(30px, -50px) scale(1.05); }
-  66% { transform: translate(-20px, 20px) scale(0.95); }
+
+  0%,
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+
+  33% {
+    transform: translate(30px, -50px) scale(1.05);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) scale(0.95);
+  }
 }
+
 .animate-blob {
   animation: blob 10s infinite;
 }
-.animation-delay-2000 { animation-delay: 2s; }
-.animation-delay-4000 { animation-delay: 4s; }
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
 
 @keyframes gradientShift {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -277,6 +368,7 @@
   0% {
     background-position: 0% 50%;
   }
+
   100% {
     background-position: 100% 50%;
   }

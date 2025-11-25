@@ -1,81 +1,99 @@
-import { Brain, Eye, GraduationCap, Zap, Lightbulb, Users } from "lucide-react";
+import { Brain, Eye, GraduationCap, Trophy, Lightbulb, Users } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function BenefitsSection() {
-  return (
-    <section id="benefits" className="py-20 bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <div className="mb-6">
-            <span className="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-6 py-2 rounded-full text-lg font-semibold">Fun & Engaging</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
-            Why Kids Love{" "}
-            <span className="animate-gradient-text bg-gradient-to-r from-purple-500 via-pink-400 to-orange-400 bg-clip-text text-transparent font-extrabold">
-              DameChess
-            </span>
-          </h2>
+  const benefits = [
+    {
+      icon: <Brain className="w-8 h-8 text-dame-purple" />,
+      title: "Critical Thinking",
+      description: "Develops problem-solving skills and strategic planning abilities that help in academics and life.",
+      color: "bg-purple-100",
+    },
+    {
+      icon: <Eye className="w-8 h-8 text-dame-green" />,
+      title: "Focus & Patience",
+      description: "Improves concentration and teaches the value of careful consideration before making decisions.",
+      color: "bg-green-100",
+    },
+    {
+      icon: <GraduationCap className="w-8 h-8 text-dame-blue" />,
+      title: "Academic Success",
+      description: "Studies show chess players often perform better in math and reading comprehension.",
+      color: "bg-blue-100",
+    },
+    {
+      icon: <Trophy className="w-8 h-8 text-dame-orange" />,
+      title: "Future Achievement",
+      description: "Builds confidence and resilience, preparing children for future challenges and success.",
+      color: "bg-orange-100",
+    },
+    {
+      icon: <Lightbulb className="w-8 h-8 text-yellow-600" />,
+      title: "Creativity",
+      description: "Chess encourages creative thinking and helps kids find innovative solutions to complex problems.",
+      color: "bg-yellow-100",
+    },
+    {
+      icon: <Users className="w-8 h-8 text-dame-red" />,
+      title: "Social Skills",
+      description: "Online tournaments and group learning help kids build confidence and sportsmanship.",
+      color: "bg-red-100",
+    },
+  ];
 
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Chess isn't just a game—it's a powerful tool that develops critical life skills while having amazing fun and achieving exciting milestones.
+  return (
+    <section id="benefits" className="py-24 relative overflow-hidden bg-[#ff4d4d]">
+      {/* Background Gradient */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#ff6b6b] via-[#ff4d4d] to-[#e60000]"></div>
+
+      {/* Background Pattern Overlay */}
+      <div className="absolute inset-0 opacity-10 mix-blend-overlay" style={{ backgroundImage: 'url(/chess-pattern.jpg)', backgroundSize: '600px', backgroundRepeat: 'repeat' }}></div>
+
+      {/* Vignette for lighter boundaries effect */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_20%,rgba(255,255,255,0.1)_100%)] pointer-events-none"></div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="text-5xl md:text-7xl font-bold mb-6 text-white">
+            Why Kids Love DameChess
+          </h2>
+          <p className="text-xl text-white/90 max-w-3xl mx-auto font-medium">
+            Chess isn't just a game—it's a powerful tool that develops critical life skills while having amazing fun.
           </p>
         </div>
 
         {/* Benefits Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 cursor-pointer group">
-            <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-              <Brain className="text-white w-8 h-8" />
-            </div>
-            <h3 className="text-xl font-bold text-purple-700 mb-3">Critical Thinking</h3>
-            <p className="text-gray-600">Develops problem-solving skills and strategic planning abilities that help in academics and life.</p>
-          </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {benefits.map((benefit, index) => (
+            <motion.div
+              key={index}
+              className="bg-white rounded-2xl p-8 shadow-lg relative overflow-hidden group"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{
+                y: -10,
+                transition: { duration: 0.3, ease: "easeOut" }
+              }}
+            >
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-transparent to-gray-50 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-500"></div>
 
-          <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 cursor-pointer group">
-            <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-              <Eye className="text-white w-8 h-8" />
-            </div>
-            <h3 className="text-xl font-bold text-green-700 mb-3">Focus & Patience</h3>
-            <p className="text-gray-600">Improves concentration and teaches the value of careful consideration before making decisions.</p>
-          </div>
+              <motion.div
+                className={`w-16 h-16 ${benefit.color} rounded-2xl flex items-center justify-center mb-6 relative z-10`}
+                whileHover={{ rotate: [0, -10, 10, 0], scale: 1.1 }}
+                transition={{ duration: 0.5 }}
+              >
+                {benefit.icon}
+              </motion.div>
 
-          <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 cursor-pointer group">
-            <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-              <GraduationCap className="text-white w-8 h-8" />
-            </div>
-            <h3 className="text-xl font-bold text-blue-700 mb-3">Academic Benefits</h3>
-            <p className="text-gray-600">Studies show chess players often perform better in math and reading comprehension.</p>
-          </div>
-
-          <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 cursor-pointer group">
-            <div className="w-16 h-16 bg-gradient-to-br from-red-400 to-red-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-              <Zap className="text-white w-8 h-8" />
-            </div>
-            <h3 className="text-xl font-bold text-red-700 mb-3">Memory Enhancement</h3>
-            <p className="text-gray-600">Regular chess practice significantly improves both short-term and long-term memory capacity.</p>
-          </div>
-
-          <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 cursor-pointer group">
-            <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-              <Lightbulb className="text-white w-8 h-8" />
-            </div>
-            <h3 className="text-xl font-bold text-yellow-700 mb-3">Creativity</h3>
-            <p className="text-gray-600">Chess encourages creative thinking and helps kids find innovative solutions to complex problems.</p>
-          </div>
-
-          <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2 hover:scale-105 cursor-pointer group">
-            <div className="w-16 h-16 bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-              <Users className="text-white w-8 h-8" />
-            </div>
-            <h3 className="text-xl font-bold text-dame-dark mb-3">Social Skills</h3>
-            <p className="text-gray-600">
-              Online tournaments and group learning help kids build confidence and sportsmanship.
-            </p>
-          </div>
-
+              <h3 className="text-xl font-bold text-dame-dark mb-3 relative z-10 group-hover:text-dame-orange transition-colors duration-300">{benefit.title}</h3>
+              <p className="text-gray-600 leading-relaxed text-sm relative z-10">
+                {benefit.description}
+              </p>
+            </motion.div>
+          ))}
         </div>
-
-        {/* Academic Performance Highlight */}
-
       </div>
     </section>
   );
