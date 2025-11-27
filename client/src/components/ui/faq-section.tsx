@@ -8,7 +8,7 @@ interface FAQItem {
 
 const faqData: FAQItem[] = [
   {
-    question: "What age group is Dame Chess Academy suitable for?",
+    question: "What age group is DameChess Academy suitable for?",
     answer: "Our program is designed for kids and teens aged 6-18. We have age-appropriate content and teaching methods that adapt to different learning styles and abilities."
   },
   {
@@ -44,7 +44,7 @@ export default function FAQSection() {
             Frequently Asked Questions
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Got questions? We've got answers! Here are the most common questions parents ask about Dame Chess Academy.
+            Got questions? We've got answers! Here are the most common questions parents ask about DameChess Academy.
           </p>
         </div>
 

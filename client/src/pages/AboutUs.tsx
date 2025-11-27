@@ -42,7 +42,7 @@ const AboutUs: React.FC = () => {
     {
       title: "Our Story",
       icon: History,
-      content: "Dame Chess started with a simple idea: to create a welcoming space where chess lovers can connect, learn with AI assistance, and compete. We wanted to bridge the gap between traditional learning and modern technology.",
+      content: "DameChess started with a simple idea: to create a welcoming space where chess lovers can connect, learn with AI assistance, and compete. We wanted to bridge the gap between traditional learning and modern technology.",
       delay: 0.2
     },
     {
@@ -79,10 +79,10 @@ const AboutUs: React.FC = () => {
             className="text-center max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-7xl font-semibold hover:font-bold transition-all duration-300 tracking-tight mb-8 text-dame-dark">
-              About <span className="text-dame-orange">Dame Chess</span>
+              About <span className="text-dame-orange">DameChess</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-900 font-medium leading-relaxed">
-              At Dame Chess, we believe chess is more than a game — it’s a journey of strategy, patience, and creativity.
+              At DameChess, we believe chess is more than a game — it’s a journey of strategy, patience, and creativity.
             </p>
             <div className="mt-8 p-6 bg-orange-50 rounded-2xl border border-orange-100 inline-block">
               <p className="text-lg text-dame-dark font-medium">
@@ -164,7 +164,7 @@ const AboutUs: React.FC = () => {
               <span className="text-dame-orange font-bold">Join the Revolution</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-semibold hover:font-bold transition-all duration-300 text-dame-dark mb-6">
-              Dame Chess — <span className="text-dame-orange">Where You Transcend.</span>
+              DameChess — <span className="text-dame-orange">Where You Transcend.</span>
             </h2>
             <p className="text-gray-900 font-medium max-w-2xl mx-auto mb-10">
               Ready to start your journey? Join thousands of players who are elevating their game today.

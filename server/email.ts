@@ -23,8 +23,8 @@ export async function sendContactEmail(input: ContactEmailInput) {
 
   try {
     const { data, error } = await resend.emails.send({
-      from: `DameChess <${process.env.FROM_EMAIL}>`,
-      to: process.env.TO_EMAIL!,
+      from: `DameChess <contact@damechess.com>`,
+      to: "contact@damechess.com",
       subject: `New Contact Form: ${subject}`,
       replyTo: email,
       html: `
@@ -53,7 +53,7 @@ export async function sendContactEmail(input: ContactEmailInput) {
 export async function sendSubscriptionEmail(email: string) {
   try {
     const { data, error } = await resend.emails.send({
-      from: `DameChess <${process.env.FROM_EMAIL}>`,
+      from: `DameChess <contact@damechess.com>`,
       to: email,
       subject: "Welcome to the Inner Circle of DameChess ♟️",
       html: `

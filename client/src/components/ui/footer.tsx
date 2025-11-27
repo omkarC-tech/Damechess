@@ -69,7 +69,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <span>✉️</span>
-                <a href="mailto:contact@technewity.com" className="hover:text-dame-orange">contact@technewity.com</a>
+                <a href="mailto:contact@damechess.com" className="hover:text-dame-orange">contact@damechess.com</a>
               </li>
             </ul>
           </div>
