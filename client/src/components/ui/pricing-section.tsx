@@ -52,7 +52,7 @@ export default function PricingSection() {
 
             <ul className="space-y-4">
               {[
-                "Weekly 1.5 hrs interactive sessions",
+                "Weekly 2 hrs interactive sessions",
                 "Weekly practice tournaments",
                 "Access to class recordings & resources"
               ].map((item, i) => (
@@ -91,7 +91,7 @@ export default function PricingSection() {
 
             <ul className="space-y-4">
               {[
-                "Weekly 1.5 hrs interactive sessions",
+                "Weekly 2 hrs interactive sessions",
                 "Weekly practice tournaments",
                 "Access to class recordings & resources",
                 "2 Compensation classes",
@@ -132,7 +132,7 @@ export default function PricingSection() {
 
             <ul className="space-y-4">
               {[
-                "Weekly 1.5 hrs interactive sessions",
+                "Weekly 2 hrs interactive sessions",
                 "Weekly practice tournaments",
                 "Access to class recordings & resources",
                 "5 Compensation classes",
