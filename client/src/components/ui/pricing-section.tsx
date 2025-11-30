@@ -35,9 +35,11 @@ export default function PricingSection() {
 
             <div className="mb-6">
               <span className="text-4xl font-bold text-dame-orange">₹3000.00</span>
-              <span className="text-gray-400 text-sm ml-2">/ month</span>
+              <div className="flex items-center gap-2 mt-1">
+                <span className="text-gray-400 text-lg line-through">₹3500.00</span>
+                <span className="text-green-600 text-sm font-semibold">You Save ₹500.00</span>
+              </div>
             </div>
-            <p className="text-green-600 text-sm font-semibold mb-6">You Save ₹500.00</p>
 
             <div className="flex gap-3 mb-8">
               <Button onClick={handleAction} className="flex-1 bg-rose-500 hover:bg-rose-600 text-white rounded-lg font-bold">
@@ -72,9 +74,11 @@ export default function PricingSection() {
 
             <div className="mb-6">
               <span className="text-4xl font-bold text-white">₹8000.00</span>
-              <span className="text-gray-400 text-sm ml-2">/ 3 months</span>
+              <div className="flex items-center gap-2 mt-1">
+                <span className="text-gray-500 text-lg line-through">₹9000.00</span>
+                <span className="text-yellow-400 text-sm font-semibold">You Save ₹1000.00</span>
+              </div>
             </div>
-            <p className="text-yellow-400 text-sm font-semibold mb-6">You Save ₹1000.00</p>
 
             <div className="flex gap-3 mb-8">
               <Button onClick={handleAction} className="flex-1 bg-rose-500 hover:bg-rose-600 text-white rounded-lg font-bold">
@@ -111,9 +115,11 @@ export default function PricingSection() {
 
             <div className="mb-6">
               <span className="text-4xl font-bold text-dame-orange">₹16000.00</span>
-              <span className="text-gray-400 text-sm ml-2">/ 6 months</span>
+              <div className="flex items-center gap-2 mt-1">
+                <span className="text-gray-400 text-lg line-through">₹18000.00</span>
+                <span className="text-green-600 text-sm font-semibold">You Save ₹2000.00</span>
+              </div>
             </div>
-            <p className="text-green-600 text-sm font-semibold mb-6">You Save ₹2000.00</p>
 
             <div className="flex gap-3 mb-8">
               <Button onClick={handleAction} className="flex-1 bg-rose-500 hover:bg-rose-600 text-white rounded-lg font-bold">

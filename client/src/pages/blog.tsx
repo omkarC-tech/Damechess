@@ -210,7 +210,7 @@ export default function Blog() {
             <Navigation />
 
             {/* Hero Section */}
-            <section className="pt-32 pb-16 bg-gray-50 border-b border-gray-100">
+            <section className="pt-36 pb-16 bg-gray-50 border-b border-gray-100">
                 <div className="container mx-auto px-4">
                     <div className="text-center max-w-3xl mx-auto mb-16">
                         <h1 className="text-4xl md:text-6xl font-extrabold text-dame-dark mb-6 tracking-tight">

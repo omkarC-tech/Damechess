@@ -64,7 +64,7 @@ const AboutUs: React.FC = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      <section className="relative pt-36 pb-20 overflow-hidden">
         {/* Background Elements */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 opacity-5">
           <div className="absolute top-20 left-10 w-64 h-64 bg-dame-orange rounded-full blur-3xl" />

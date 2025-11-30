@@ -55,7 +55,7 @@ export default function Contact() {
         <div className="min-h-screen bg-white font-sans">
             <Navigation />
 
-            <main className="pt-32 pb-24">
+            <main className="pt-36 pb-24">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
                         <h1 className="text-4xl md:text-5xl font-extrabold text-dame-dark mb-4">
@@ -93,8 +93,8 @@ export default function Contact() {
                                         </div>
                                         <div>
                                             <h4 className="font-bold text-dame-dark">Phone Number</h4>
-                                            <a href="tel:+919821679475" className="text-gray-600 hover:text-dame-orange transition-colors">
-                                                +91 98216 79475
+                                            <a href="tel:+918169081041" className="text-gray-600 hover:text-dame-orange transition-colors">
+                                                +91 81690 81041
                                             </a>
                                         </div>
                                     </div>
